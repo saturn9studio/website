@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <circle cx="60" cy="60" r="30" fill="#2d3748"/>
+  
+  <path d="M60 75
+           A55 15 0 0 1 60 45" 
+        fill="none" 
+        stroke="#2959aa" 
+        stroke-width="8"
+        transform="rotate(-15,60,60)"/>
+
+  <path d="M60 75
+           A55 15 0 1 0 60 45" 
+        fill="none" 
+        stroke="#bb9af7" 
+        stroke-width="8"
+        transform="rotate(-15,60,60)"/>
+
+  <path d="M60 60          
+          L30 60
+          A30 30 0 0 1 90 60
+          Z" 
+      fill="#2d3748"/>
+</svg>
