@@ -5,6 +5,7 @@ body {
     color: #a9b1d6;
     font-family: 'PT Sans', Helvetica, Arial, sans-serif;
     font-size: 22px;
+    user-select: none;
 }
 
 .vertical-center {
