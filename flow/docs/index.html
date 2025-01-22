@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <title>Flow Documentation</title>
+        <link rel="icon" type="image/x-icon" href="../../static/img/s9.svg" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Custom style -->
+        <link rel="stylesheet" type="text/css" href="../../static/css/style.css" />
+    </head>
+    <body>
+        <div class="container vertical-center">
+            <div class="content">
+                <div class="header">
+                    <h1>Flow Documentation</h1>
+                </div>
+                <div class="text row">
+                    <h2 id="contents">Contents</h2>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#editor-modes">Editor modes</a></li>
+                        <li><a href="#markdown">Markdown</a></li>
+                        <li><a href="#clipboard">Clipboard</a></li>
+                    </ul>
+                    <hr />
+                    <h2 id="features">Distraction-free writing experience<sup><a href="#contents">^</a></sup></h2>
+                    <p>Flow aims to provide a smooth, beautiful writing
+                    experience aimed at inspiring you and keeping you in the
+                    zone.</p>
+                    <p>The <a href="#editor-modes">Focus mode</a> mutes all
+                    distraction and lets you focus on the next word, then the
+                    one after. The <a href="#editor-modes">Edit mode</a>
+                    provides a simple yet powerful Markdown editing experience
+                    for tuning your first draft.</p>
+                    <p>As you work with Flow, you will see your writing come to
+                    life. The editor provides some unique features to make your
+                    text more closely resemble a printed book:</p>
+                    <p><b>Auto-indentation</b> will automatically indent every
+                    text paragraph except a first paragraph following a title,
+                    quote, list, separator, or blank line. This is the common
+                    way a print book is indented.</p>
+                    <p>The <b>fancy line separator</b> is a Flow-specific addition
+                    to the standard <a href="#markdown">Markdown</a> syntax. The
+                    line separator <code>***</code> is rendered as <span
+                    class="faded">∵</span> rather than a horizontal line, again
+                    to more closely match a print book.</p>
+                    <hr />
+                    <h2 id="editor-modes">Editor modes<sup><a href="#contents">^</a></sup></h2>
+                    <h3 class="editor-mode"><img src="../../static/img/focus-mode.svg" alt="Focus mode" /><span>Focus Mode</span></h3>
+                    <p>Focus mode provides the ultimate distraction-free writing
+                    experience. Flow goes into full screen mode. Colorful
+                    elements fade away to avoid distraction and all text outside
+                    the current sentence is muted. Spellchecking is
+                    disabled. Press <code>ESC</code> or click outside the editor
+                    to exit focus mode.</p>
+                    <h3 class="editor-mode"><img src="../../static/img/edit-mode.svg" alt="Edit mode" /><span>Edit Mode</span></h3>
+                    <p>Edit mode allows you to iterate on your text. Markdown
+                    annotations are revealed when under the cursor, but
+                    otherwise stay hidden. Auto-indentation and spellchecking
+                    are enabled. This mode also displays word count in the
+                    bottom right corner.</p>
+                    <h3 class="editor-mode"><img src="../../static/img/read-mode.svg" alt="Read mode" /><span>Read Mode</span></h3>
+                    <p>Read mode is optimized for reading. All markup is hidden
+                    and editing is disabled. Text is justified, to more closely
+                    resemble a print book. Spellchecking is disabled.</p>
+                    <h3 class="editor-mode"><img src="../../static/img/source-mode.svg" alt="Source mode" /><span>Source Mode</span></h3>
+                    <p>Source mode shows the full Markdown. Unlike the other
+                    modes, no markup is hidden regardless of where the cursor
+                    is. Auto-indentation is disabled. While some auto-formatting
+                    is preserved, this view is closest to the plain underlying
+                    Markdown document, as you would view it in a plain text
+                    editor.</p>
+                    <hr />
+                    <h2 id="markdown">Markdown<sup><a href="#contents">^</a></sup></h2>
+                    <p>Markdown is a lightweight markup language with plain text
+                    formatting syntax. Its design allows it to be converted to
+                    many output formats. Markdown is a modern way to create rich
+                    text documents using plain text. It is particularly well
+                    suited for distraction-free writing as inline annotations
+                    help keep you in the flow when writing.</p>
+                    <p>Below is a quick reference of the supported features:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Markup syntax</th>
+                                <th>How it looks like</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td># Heading 1</td>
+                                <td><h1>Heading 1</h1></td>
+                            </tr>
+                            <tr>
+                                <td>## Heading 2</td>
+                                <td><h2>Heading 2</h2></td>
+                            </tr>
+                            <tr>
+                                <td>### Heading 3</td>
+                                <td><h3>Heading 3</h3></td>
+                            </tr>
+                            <tr>
+                                <td>#### Heading 4</td>
+                                <td><h4>Heading 4</h4></td>
+                            </tr>
+                            <tr>
+                                <td>##### Heading 5</td>
+                                <td><h5>Heading 2</h5></td>
+                            </tr>
+                            <tr>
+                                <td>###### Heading 6</td>
+                                <td><h6>Heading 6</h6></td>
+                            </tr>
+                            <tr>
+                                <td>**Bold**</td>
+                                <td><strong>Bold</strong></td>
+                            </tr>
+                            <tr>
+                                <td>*Italic*</td>
+                                <td><em>Italic</em></td>
+                            </tr>
+                            <tr>
+                                <td>~Underline~~</td>
+                                <td><u>Underline</u></td>
+                            </tr>
+                            <tr>
+                                <td>~~Strikethrough~~</td>
+                                <td><del>Strikethrough</del></td>
+                            </tr>
+                            <tr>
+                                <td>==Highlight==</td>
+                                <td><mark>Highlight</mark></td>
+                            </tr>
+                            <tr>
+                                <td>`Code`</td>
+                                <td><code>Code</code></td>
+                            </tr>
+                            <tr>
+                                <td>&gt; Block quote</td>
+                                <td><blockquote>Block quote</blockquote></td>
+                            </tr>
+                            <tr>
+                                <td>1. Ordered list</td>
+                                <td>
+                                    <ol>
+                                        <li>Ordered list</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>* Unordered list</td>
+                                <td>
+                                    <ul>
+                                        <li>Unordered list</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>--- <span class="faded">(line separator)</span></td>
+                                <td><hr /></td>
+                            </tr>
+                            <tr>
+                                <td>*** <span class="faded">(fancy line separator)</span></td>
+                                <td style="text-align: center;"><span class="faded">∵</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>You can also mix markup as needed. ***Bold italic*** becomes <b><em>Bold italic</em></b>.</p>
+                    <p>Common Markdown has some special requirements, like
+                    separating paragraphs with two newlines. Flow works
+                    differently: the editor displays text like a print book,
+                    continuous and without requiring extra blank lines. At the
+                    same time, when saved to a file, Flow will convert this to
+                    the common Markdown syntax to maintain compatibility. This
+                    way, Flow can open Markdown documents created with other
+                    apps, while still providing a beautiful rendering of the
+                    text.</p>
+                    <p>Additional Markdown features are coming soon, see <a href="../roadmap/">the roadmap</a>.</p>
+                    <hr />
+                    <h2 id="clipboard">Clipboard<sup><a href="#contents">^</a></sup></h2>
+                    <p>An important note on how Flow leverages the clipboard:
+                    even though export to other file formats is not yet
+                    implemented (coming soon, see <a href="../roadmap/">the
+                    roadmap</a>), copying text in Flow will put both text and
+                    HTML on the clipboard. If you then paste in a plain text
+                    editor, you will see the Markdown content, including markup
+                    characters like <code>*</code>. On the other hand, if you
+                    paste this in a rich text editor like Word, you will get
+                    rich text, already formatted.</p>
+                    <p>Similarly, while document import is not supported, if you
+                    paste formatted HTML from the clipboard, Flow will convert
+                    this to Markdown and try to match the formatting of the
+                    clipboard content.</p>
+                </div>
+                <div class="footer text row">
+                    <p>© 2025 <a href="/">Saturn9</a> LLC</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
