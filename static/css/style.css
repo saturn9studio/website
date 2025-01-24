@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900);
 
 body {
-    background-color: #1a1b26;
+    background: linear-gradient(135deg, #1a1b26, #3a3b46);
+    transition: background 0.5s ease;
     color: #a9b1d6;
     font-family: 'Poppins', Helvetica, Arial, sans-serif;
     font-size: 20px;
