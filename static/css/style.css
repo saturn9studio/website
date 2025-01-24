@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900);
 
 body {
-    background: linear-gradient(135deg, #1a1b26, #3a3b46);
+    background: linear-gradient(90deg, #1a1b26, #24283b);
     transition: background 0.5s ease;
     color: #a9b1d6;
     font-family: 'Poppins', Helvetica, Arial, sans-serif;
@@ -72,6 +72,7 @@ img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
+    box-shadow: 0 0 10px #000;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -90,9 +91,10 @@ img {
 }
 
 .header {
-    color: #565f89;
+    color: #2959aa;
     text-align: center;
     margin-bottom: 20px;
+    text-shadow: 0 2px 2px #000;
 }
 
 .footer {
@@ -112,7 +114,8 @@ hr {
 }
 
 h2, li::marker {
-    color: #565f89;
+    color: #2959aa;
+    text-shadow: 0 2px 2px #000;
 }
 
 table {
