@@ -160,6 +160,10 @@ code {
     color: #565f89;
 }
 
+.fancy {
+    color: white;
+}
+
 .editor-mode {
     span {
         vertical-align: middle;
