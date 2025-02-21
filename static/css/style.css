@@ -7,6 +7,7 @@ body {
     font-family: 'Poppins', Helvetica, Arial, sans-serif;
     font-size: 20px;
     user-select: none;
+    margin: 0;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -200,4 +201,110 @@ a.download-button:link, a.download-button:visited {
 
 .download-button:hover {
     background-color: #0055CC;
+}
+
+/* Sticky Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #1a1b26;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-logo {
+    font-size: 24px;
+    color: #bb9af7;
+    font-weight: 700;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #a9b1d6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #bb9af7;
+}
+
+/* Banner */
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    text-align: center;
+    background: linear-gradient(90deg, #2d2e3e, #24283b);
+}
+
+.banner h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Feature Sections */
+.feature-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px auto;
+    max-width: 1200px;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.feature-section.alt {
+    flex-direction: row-reverse;
+}
+
+.feature-image img {
+    border-radius: 8px;
+}
+
+.feature-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .feature-section {
+        flex-direction: column;
+        align-items: center;
+        margin: 30px auto;
+    }
+    .feature-section.alt {
+        flex-direction: column;
+    }
+    .feature-image,
+    .feature-text {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .banner {
+        height: auto;
+        padding: 40px 20px;
+    }
+    .banner h1 {
+        font-size: 2rem;
+    }
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .navbar {
+        padding: 10px 20px;
+    }
 }
