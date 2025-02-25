@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,6 +13,8 @@
         <link rel="stylesheet" type="text/css" href="../../static/css/style.css" />
     </head>
     <body>
+        {% include navbar.html %}
+
         <div class="container vertical-center">
             <div class="content">
                 <div class="header">
@@ -73,10 +77,9 @@
                     <hr />
                     <p><a href="../">Flow</a> > <a href="#">Roadmap</a></p>
                 </div>
-                <div class="footer text row">
-                    <p>© 2025 <a href="/">Saturn9</a> LLC</p>
-                </div>
             </div>
         </div>
+
+        {% include footer.html %}
     </body>
 </html>

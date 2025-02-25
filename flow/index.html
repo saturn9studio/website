@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,16 +13,7 @@
 </head>
 
 <body>
-    <!-- Sticky Nav -->
-    <header class="navbar">
-        <div class="nav-logo">Flow</div>
-        <nav>
-            <ul>
-                <li><a href="./docs/">Docs</a></li>
-                <li><a href="./roadmap/">Roadmap</a></li>
-            </ul>
-        </nav>
-    </header>
+    {% include navbar.html %}
 
     <!-- Banner Image -->
     <section class="banner">
@@ -33,52 +26,61 @@
     <section class="feature-section" data-aos="fade-right">
         <div class="feature-image">
             <!-- Screenshot or screen recording -->
-            <img src="../static/img/feature1.png" alt="Feature 1" />
+            <img src="../static/img/screenshots/blank.png" />
         </div>
         <div class="feature-text">
-            <h2>Feature One</h2>
-            <p>Write more, worry less. Flow’s streamlined editor keeps you in the zone.</p>
+            <h2>It's all about inspiration</h2>
+            <p>Flow was built from the ground up as a modern, carefully designed experience, meant to inspire at every step.</p>
         </div>
     </section>
 
     <section class="feature-section alt" data-aos="fade-left">
-        <div class="feature-text">
-            <h2>Feature Two</h2>
-            <p>Auto-save and version history so you never lose progress.</p>
-        </div>
         <div class="feature-image">
-            <img src="../static/img/feature2.png" alt="Feature 2" />
+            <img src="../static/img/screenshots/focus.png" />
+        </div>
+        <div class="feature-text">
+            <h2>Distraction-free writing</h2>
+            <p>Focus mode provides an immersive, full screen writing experience. Everything except the current sentence is muted, so you can focus on what comes next.</p>
         </div>
     </section>
 
     <section class="feature-section" data-aos="fade-right">
         <div class="feature-image">
-            <img src="../static/img/feature3.png" alt="Feature 3" />
+            <img src="../static/img/screenshots/themes.png" />
         </div>
         <div class="feature-text">
-            <h2>Feature Three</h2>
-            <p>Distraction-free mode with light or dark themes.</p>
+            <h2>Themes</h2>
+            <p>Flow was designed to inspire. Explore multiple themes and pick the one that speaks to you.</p>
         </div>
     </section>
 
     <section class="feature-section alt" data-aos="fade-left">
-        <div class="feature-text">
-            <h2>Feature Four</h2>
-            <p>Collaborate in real time with seamless sharing and commenting.</p>
-        </div>
         <div class="feature-image">
-            <img src="../static/img/feature4.png" alt="Feature 4" />
+            <img src="../static/img/screenshots/markdown.png" />
+        </div>
+        <div class="feature-text">
+            <h2>Markdown formatting</h2>
+            <p>Markdown allows you to quickly style your text, using the keyboard, without breaking stride. The markup disappears when not under cursor to remove distractions.</p>
         </div>
     </section>
 
-    <footer class="footer">
-        <p>© 2025 <a href="/">Saturn9</a> LLC</p>
-    </footer>
+    <!-- Call to Action -->
+    <section class="banner bottom">
+        <h2>What is your story?</h2>
+        <a href="https://github.com/saturn9studio/flow-releases/releases/download/v0.1.0/Flow-0.1.0-universal.dmg" class="download-button">Download Flow for macOS</a>
+    </section>
+
+    {% include footer.html %}
 
     <!-- Example: Animate on scroll library (optional) -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            duration: 2000,
+            easing: 'ease-in-out',
+            delay: 200,
+            once: false
+        });
     </script>
 </body>
 </html>
