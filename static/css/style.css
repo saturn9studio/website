@@ -348,6 +348,7 @@ a.download-button:link, a.download-button:visited {
     }
 
     .banner {
+        margin-top: 60px;
         height: 30vh;
         padding: 40px 16px;
     }
@@ -365,14 +366,6 @@ a.download-button:link, a.download-button:visited {
         width: calc(100% - 32px);
         margin: 16px;
         justify-content: center;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .navbar {
-        padding: 10px 20px;
     }
 }
 
@@ -435,6 +428,14 @@ a.download-button:link, a.download-button:visited {
     .nav-menu.active {
         opacity: 1;
         visibility: visible;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        padding: 10px 20px;
     }
 
     .navbar ul {
