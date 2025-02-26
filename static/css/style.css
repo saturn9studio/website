@@ -348,6 +348,7 @@ a.download-button:link, a.download-button:visited {
     }
 
     .banner {
+        height: 30vh;
         padding: 40px 16px;
     }
 
