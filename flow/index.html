@@ -1,31 +1,85 @@
+---
+---
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset='utf-8' />
-        <title>Flow</title>
-        <link rel="icon" type="image/x-icon" href="../static/img/s9.svg" />
+<head>
+    <meta charset="utf-8" />
+    <title>Flow</title>
+    <link rel="icon" type="image/x-icon" href="../static/img/s9.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
 
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
 
-        <!-- Custom style -->
-        <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
-    </head>
-    <body>
-        <div class="container vertical-center">
-            <div class="content">
-                <div class="header">
-                    <h1>Flow</h1>
-                </div>
-                <div class="text row">
-                    <p>The best focused writing experience.</p>
-                </div>
-                <div class="text row center">
-                    <a href="https://github.com/saturn9studio/flow-releases/releases/download/v0.1.0/Flow-0.1.0-universal.dmg" class="download-button">Download Flow for macOS</a>
-                </div>
-                <div class="footer text row">
-                    <p>© 2025 <a href="/">Saturn9</a> LLC</p>
-                </div>
-            </div>
+<body>
+    {% include navbar.html %}
+
+    <!-- Banner Image -->
+    <section class="banner">
+        <h1>Flow</h1>
+        <p>The best focused writing experience.</p>
+        <a href="https://github.com/saturn9studio/flow-releases/releases/download/v0.1.0/Flow-0.1.0-universal.dmg" class="download-button">Download Flow for macOS</a>
+    </section>
+
+    <!-- Feature Sections -->
+    <section class="feature-section" data-aos="fade-right">
+        <div class="feature-text">
+            <h2>It's all about inspiration</h2>
+            <p>Flow was built from the ground up as a modern, carefully designed experience, meant to inspire at every step.</p>
         </div>
-    </body>
+        <div class="feature-image">
+            <img src="../static/img/screenshots/blank.png" />
+        </div>
+    </section>
+
+    <section class="feature-section alt" data-aos="fade-left">
+        <div class="feature-text">
+            <h2>Distraction-free writing</h2>
+            <p>Focus mode provides an immersive, full screen writing experience. Everything except the current sentence is muted, so you can focus on what comes next.</p>
+        </div>
+        <div class="feature-image">
+            <img src="../static/img/screenshots/focus.png" />
+        </div>
+    </section>
+
+    <section class="feature-section" data-aos="fade-right">
+        <div class="feature-text">
+            <h2>Themes</h2>
+            <p>Flow was designed to inspire. Explore multiple themes and pick the one that speaks to you.</p>
+        </div>
+        <div class="feature-image">
+            <img src="../static/img/screenshots/themes.png" />
+        </div>
+    </section>
+
+    <section class="feature-section alt" data-aos="fade-left">
+        <div class="feature-text">
+            <h2>Markdown formatting</h2>
+            <p>Markdown allows you to quickly style your text, using the keyboard, without breaking stride. The markup disappears when not under cursor to remove distractions.</p>
+        </div>
+        <div class="feature-image">
+            <img src="../static/img/screenshots/markdown.png" />
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="banner bottom">
+        <h2>What is your story?</h2>
+        <a href="https://github.com/saturn9studio/flow-releases/releases/download/v0.1.0/Flow-0.1.0-universal.dmg" class="download-button">Download Flow for macOS</a>
+    </section>
+
+    {% include footer.html %}
+
+    <script src="../static/js/navigation.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000,
+            easing: 'ease-in-out',
+            delay: 200,
+            once: false
+        });
+    </script>
+</body>
 </html>
