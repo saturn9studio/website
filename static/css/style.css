@@ -336,6 +336,10 @@ a.download-button:link, a.download-button:visited {
 }
 
 @media only screen and (max-width: 768px) {
+    .mobile-padding {
+        padding-top: 60px;
+    }
+
     .feature-section,
     .feature-section.alt {
         flex-direction: column;
