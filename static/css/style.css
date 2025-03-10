@@ -211,8 +211,9 @@ a.download-button:link, a.download-button:visited {
 
 /* Sticky Navbar */
 .navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 999;
     background-color: #1a1b26;
