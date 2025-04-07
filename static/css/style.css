@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900);
 
-html, body {
+html,
+body {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -11,7 +12,7 @@ body {
     background: linear-gradient(90deg, #1a1b26, #24283b);
     transition: background 0.5s ease;
     color: #a9b1d6;
-    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    font-family: "Poppins", Helvetica, Arial, sans-serif;
     font-size: 20px;
     user-select: none;
     -webkit-touch-callout: none;
@@ -28,11 +29,11 @@ body {
 }
 
 .vertical-center {
-  min-height: 100%;
-  min-height: 100vh;
+    min-height: 100%;
+    min-height: 100vh;
 
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .content {
@@ -59,11 +60,19 @@ body {
 }
 
 @keyframes wobble {
-    0% { transform: rotate(0deg) scale(1); }
-    25% { transform: rotate(-15deg) scale(1.4); }
-    75% { transform: rotate(15deg) scale(1.4); }
-    100% { transform: rotate(0deg) scale(1); }
-  }
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        transform: rotate(-15deg) scale(1.4);
+    }
+    75% {
+        transform: rotate(15deg) scale(1.4);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
 
 @keyframes highlight-animation {
     0% {
@@ -94,7 +103,10 @@ img {
     }
 }
 
-a:link, a:visited, a:active, a:hover {
+a:link,
+a:visited,
+a:active,
+a:hover {
     color: #bb9af7;
     -webkit-transition: all ease-in-out 0.3s;
     -moz-transition: all ease-in-out 0.3s;
@@ -123,10 +135,11 @@ a:link, a:visited, a:active, a:hover {
 }
 
 hr {
-    border-color: #565f89
+    border-color: #565f89;
 }
 
-h2, li::marker {
+h2,
+li::marker {
     color: white;
     text-shadow: 0 2px 2px #000;
 }
@@ -136,7 +149,14 @@ table {
     width: 100%;
     margin-bottom: 20px;
 
-    h1, h2, h3, h4, h5, h6, ol, ul {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ol,
+    ul {
         color: #a9b1d6;
         margin-block-start: 0;
         margin-block-end: 0;
@@ -148,7 +168,7 @@ table {
         margin: 0;
     }
 }
-    
+
 td {
     border: 1px solid #565f89;
     padding: 5px;
@@ -156,7 +176,7 @@ td {
 }
 
 code {
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Source Code Pro", monospace;
     font-size: 16px;
     background-color: #2d2e3e;
     color: #9ece6a;
@@ -193,7 +213,7 @@ sup {
 a.download-button {
     display: inline-flex;
     align-items: center;
-    background-color: #007AFF;
+    background-color: #007aff;
     padding: 12px 24px;
     border-radius: 8px;
     text-decoration: none;
@@ -201,13 +221,14 @@ a.download-button {
     margin-top: 10px;
     transition: background-color 0.2s ease;
 }
-    
-a.download-button:link, a.download-button:visited {
+
+a.download-button:link,
+a.download-button:visited {
     color: white;
 }
 
 .download-button:hover {
-    background-color: #0055CC;
+    background-color: #0055cc;
 }
 
 /* Sticky Navbar */
@@ -387,6 +408,51 @@ a.download-button:link, a.download-button:visited {
         margin: 16px;
         justify-content: center;
     }
+
+    /* Make tables responsive */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #565f89;
+    }
+
+    td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        word-break: break-word;
+        width: auto;
+        min-height: 30px;
+    }
+
+    td:before {
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: bold;
+    }
+
+    /* Handle code blocks in mobile */
+    code {
+        word-break: break-word;
+        white-space: pre-wrap;
+    }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -397,17 +463,17 @@ a.download-button:link, a.download-button:visited {
 
     .feature-text {
         max-width: 40%;
-        font-size: 16px;  /* Reduce text size */
+        font-size: 16px; /* Reduce text size */
     }
 
     .feature-text h2 {
-        font-size: 22px;  /* Reduce heading size */
+        font-size: 22px; /* Reduce heading size */
         margin-bottom: 12px;
     }
 
     .feature-image {
         flex: 1;
-        max-width: 60%;  /* Increase image width */
+        max-width: 60%; /* Increase image width */
     }
 }
 
