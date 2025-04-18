@@ -136,7 +136,8 @@ a:hover {
     margin: 0 auto;
 }
 
-.footer-discord, .footer-x {
+.footer-discord,
+.footer-x {
     margin-right: 20px;
 }
 
@@ -178,6 +179,7 @@ hr {
     border-color: #565f89;
 }
 
+h1,
 h2,
 li::marker {
     color: white;
@@ -357,11 +359,21 @@ a.download-button:visited {
     font-size: 3rem;
     color: #fff;
     margin-bottom: 10px;
+    margin-top: 18vh;
+}
+
+.banner p {
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px #000;
 }
 
 .banner.bottom {
     background: linear-gradient(180deg, #2d2e3e, #24283b);
     height: 40vh;
+}
+
+.banner.bottom h2 {
+    margin-top: 20px;
 }
 
 /* Feature Sections */
@@ -449,6 +461,10 @@ a.download-button:visited {
         justify-content: center;
     }
 
+    .banner.bottom {
+        height: 20vh;
+    }
+
     /* Make tables responsive */
     table,
     thead,
@@ -497,6 +513,12 @@ a.download-button:visited {
     .footer-container {
         flex-direction: column;
         gap: 20px;
+    }
+
+    .footer-discord,
+    .footer-x,
+    .footer-copyright {
+        margin: 0;
     }
 }
 
