@@ -131,11 +131,17 @@ a:hover {
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 60px;
     max-width: 700px;
     margin: 0 auto;
+}
+
+.footer-discord, .footer-x {
+    margin-right: 20px;
+}
+
+.footer-copyright {
+    margin-left: auto;
 }
 
 .footer-discord a {
@@ -145,7 +151,19 @@ a:hover {
     text-decoration: none;
 }
 
+.footer-x a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
 .discord-logo {
+    width: 24px;
+    height: 24px;
+}
+
+.x-logo {
     width: 24px;
     height: 24px;
 }
