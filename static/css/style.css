@@ -448,6 +448,7 @@ a.download-button:visited {
 
     .banner h1 {
         font-size: 32px;
+        margin-top: 10vh;
     }
 
     .banner p {
