@@ -19,7 +19,7 @@
     <section class="banner">
         <h1>Flow</h1>
         <p>The best focused writing experience.</p>
-        <a href="https://github.com/saturn9studio/flow-releases/releases/download/v0.1.1/Flow-0.1.1-universal.dmg" class="download-button" id="button-top">Download Flow for macOS</a>
+        <a href="https://apps.apple.com/us/app/flow-by-saturn9/id6744873955" class="download-button">Download on the Mac App Store</a>
     </section>
 
     <!-- Feature Sections -->
@@ -66,7 +66,7 @@
     <!-- Call to Action -->
     <section class="banner bottom">
         <h2>What is your story?</h2>
-        <a href="https://github.com/saturn9studio/flow-releases/releases/download/v0.1.1/Flow-0.1.1-universal.dmg" class="download-button" id="button-bottom">Download Flow for macOS</a>
+        <a href="https://apps.apple.com/us/app/flow-by-saturn9/id6744873955" class="download-button">Download on the Mac App Store</a>
     </section>
 
     {% include footer.html %}
@@ -80,23 +80,6 @@
             delay: 200,
             once: false,
         });
-    </script>
-    <script>
-        async function updateDownloadLink() {
-            const repo = 'saturn9studio/flow-releases';
-            try {
-                const response = await fetch(`https://api.github.com/repos/${repo}/releases/latest`);
-                const data = await response.json();
-                const version = data.tag_name;
-                const downloadUrl = `https://github.com/${repo}/releases/download/${version}/Flow-${version.substring(1)}-universal.dmg`;
-                document.getElementById('button-top').href = downloadUrl;
-                document.getElementById('button-bottom').href = downloadUrl;
-            } catch (error) {
-                console.error('Error updating download link:', error);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', updateDownloadLink);
     </script>
 </body>
 </html>
