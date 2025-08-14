@@ -134,15 +134,22 @@ a:hover {
     align-items: center;
     max-width: 700px;
     margin: 0 auto;
+    justify-content: space-between;
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .footer-discord,
 .footer-x {
-    margin-right: 20px;
+    margin: 0;
 }
 
 .footer-copyright {
-    margin-left: auto;
+    margin: 0;
 }
 
 .footer-discord a {
@@ -513,12 +520,22 @@ a.download-button:visited {
 
     .footer-container {
         flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .footer-social {
+        order: 2;
         gap: 20px;
     }
 
-    .footer-discord,
-    .footer-x,
     .footer-copyright {
+        order: 1;
+        margin: 0;
+    }
+
+    .footer-discord,
+    .footer-x {
         margin: 0;
     }
 }
