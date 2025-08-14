@@ -126,7 +126,7 @@ a:hover {
     color: rgba(225, 229, 242, 0.6);
     text-align: center;
     font-size: medium;
-    padding: 40px 0;
+    padding: 20px 0;
     background: rgba(15, 15, 35, 0.8);
     backdrop-filter: blur(20px);
     border-top: 1px solid rgba(0, 85, 204, 0.1);
@@ -395,7 +395,7 @@ a.download-button:visited {
     font-weight: 800;
     color: #fff;
     margin-bottom: 24px;
-    margin-top: 0;
+    margin-top: 80px;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     letter-spacing: -0.02em;
     position: relative;
@@ -435,7 +435,7 @@ a.download-button:visited {
 }
 
 .banner.bottom h2 {
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 /* Feature Sections */
