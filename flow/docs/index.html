@@ -20,25 +20,44 @@
     <body>
         {% include navbar.html %}
 
-        <div class="container vertical-center">
-            <div class="content">
-                <div class="header">
-                    <h1>Flow Documentation</h1>
+        <!-- Mobile Overlay -->
+        <div class="docs-overlay" id="docsOverlay"></div>
+
+        <!-- Mobile Navigation Toggle -->
+        <button class="docs-nav-toggle" id="docsNavToggle">
+            <span class="arrow-icon">→</span>
+        </button>
+
+        <div class="docs-container">
+            <!-- Sidebar Navigation -->
+            <aside class="docs-sidebar" id="docsSidebar">
+                <div class="sidebar-header">
+                    <h3>Documentation</h3>
                 </div>
-                <div class="text row">
-                    <h2 id="contents">Contents</h2>
+                <nav class="sidebar-nav">
                     <ul>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#editor-modes">Editor modes</a></li>
-                        <li><a href="#markdown">Markdown</a></li>
-                        <li><a href="#clipboard">Clipboard</a></li>
+                        <li>
+                            <a href="#features" class="nav-link">Features</a>
+                        </li>
+                        <li>
+                            <a href="#editor-modes" class="nav-link"
+                                >Editor Modes</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#markdown" class="nav-link">Markdown</a>
+                        </li>
+                        <li>
+                            <a href="#clipboard" class="nav-link">Clipboard</a>
+                        </li>
                     </ul>
-                    <hr />
-                    <h2 id="features">
-                        Distraction-free writing experience<sup
-                            ><a href="#contents">^</a></sup
-                        >
-                    </h2>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="docs-content">
+                <div class="docs-text">
+                    <h2 id="features">Features</h2>
                     <p>
                         Flow aims to provide a smooth, beautiful writing
                         experience aimed at inspiring you and keeping you in the
@@ -73,9 +92,7 @@
                         line, again to more closely match a print book.
                     </p>
                     <hr />
-                    <h2 id="editor-modes">
-                        Editor modes<sup><a href="#contents">^</a></sup>
-                    </h2>
+                    <h2 id="editor-modes">Editor modes</h2>
                     <h3 class="editor-mode">
                         <img
                             src="../../static/img/focus-mode.svg"
@@ -130,9 +147,7 @@
                         view it in a plain text editor.
                     </p>
                     <hr />
-                    <h2 id="markdown">
-                        Markdown<sup><a href="#contents">^</a></sup>
-                    </h2>
+                    <h2 id="markdown">Markdown</h2>
                     <p>
                         Markdown is a lightweight markup language with plain
                         text formatting syntax. Its design allows it to be
@@ -347,9 +362,7 @@
                         <a href="../roadmap/">the roadmap</a>.
                     </p>
                     <hr />
-                    <h2 id="clipboard">
-                        Clipboard<sup><a href="#contents">^</a></sup>
-                    </h2>
+                    <h2 id="clipboard">Clipboard</h2>
                     <p>
                         An important note on how Flow leverages the clipboard:
                         even though export to other file formats is not yet
@@ -369,13 +382,16 @@
                         of the clipboard content.
                     </p>
                     <hr />
-                    <p><a href="../">Flow</a> > <a href="#">Docs</a></p>
+                    <div class="docs-breadcrumb">
+                        <p><a href="../">Flow</a> > <a href="#">Docs</a></p>
+                    </div>
                 </div>
-            </div>
+            </main>
         </div>
 
         {% include footer.html %}
 
         <script src="../../static/js/navigation.js"></script>
+        <script src="../../static/js/docs-navigation.js"></script>
     </body>
 </html>

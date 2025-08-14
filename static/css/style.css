@@ -49,7 +49,7 @@ body {
 
 .highlight {
     display: inline-block;
-    color: #0055CC;
+    color: #0055cc;
     font-weight: bold;
     transition: all 0.3s ease;
 }
@@ -107,7 +107,7 @@ a:link,
 a:visited,
 a:active,
 a:hover {
-    color: #0055CC;
+    color: #0055cc;
     -webkit-transition: all ease-in-out 0.3s;
     -moz-transition: all ease-in-out 0.3s;
     -o-transition: all ease-in-out 0.3s;
@@ -265,7 +265,7 @@ sup {
 a.download-button {
     display: inline-flex;
     align-items: center;
-    background: linear-gradient(135deg, #0055CC 0%, #007AFF 100%);
+    background: linear-gradient(135deg, #0055cc 0%, #007aff 100%);
     padding: 16px 32px;
     border-radius: 12px;
     text-decoration: none;
@@ -285,7 +285,7 @@ a.download-button:visited {
 }
 
 .download-button:hover {
-    background: linear-gradient(135deg, #0044AA 0%, #0066FF 100%);
+    background: linear-gradient(135deg, #0044aa 0%, #0066ff 100%);
     transform: translateY(-2px);
     box-shadow: 0 12px 40px rgba(0, 85, 204, 0.6);
 }
@@ -311,7 +311,7 @@ a.download-button:visited {
 
 .navbar .nav-logo {
     font-size: 24px;
-    color: #0055CC;
+    color: #0055cc;
     font-weight: 700;
 }
 
@@ -323,17 +323,24 @@ a.download-button:visited {
 .navbar ul {
     list-style: none;
     display: flex;
-    gap: 20px;
 }
 
 .navbar a {
     color: #a9b1d6;
     text-decoration: none;
     font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
 }
 
 .navbar a:hover {
-    color: #0055CC;
+    color: #ffffff;
+    background: rgba(0, 85, 204, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 85, 204, 0.3);
 }
 
 /* Banner */
@@ -347,28 +354,40 @@ a.download-button:visited {
     padding: 0;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #0055CC 0%, #0066FF 50%, #007AFF 100%);
+    background: linear-gradient(135deg, #0055cc 0%, #0066ff 50%, #007aff 100%);
     background-size: 400% 400%;
     animation: gradient-flow 12s ease infinite;
     transition: all 0.3s ease;
 }
 
 .banner::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(0, 85, 204, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(0, 102, 255, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(0, 122, 255, 0.2) 0%, transparent 50%);
+    background: radial-gradient(
+            circle at 20% 80%,
+            rgba(0, 85, 204, 0.3) 0%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(0, 102, 255, 0.3) 0%,
+            transparent 50%
+        ),
+        radial-gradient(
+            circle at 40% 40%,
+            rgba(0, 122, 255, 0.2) 0%,
+            transparent 50%
+        );
     animation: floating-orbs 20s ease-in-out infinite;
 }
 
 @keyframes floating-orbs {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0px) rotate(0deg);
         opacity: 1;
     }
@@ -419,19 +438,23 @@ a.download-button:visited {
 }
 
 .banner.bottom {
-    background: linear-gradient(135deg, #003366 0%, #0055CC 50%, #007AFF 100%);
+    background: linear-gradient(135deg, #003366 0%, #0055cc 50%, #007aff 100%);
     height: 40vh;
     position: relative;
 }
 
 .banner.bottom::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 50% 50%, rgba(0, 85, 204, 0.1) 0%, transparent 70%);
+    background: radial-gradient(
+        circle at 50% 50%,
+        rgba(0, 85, 204, 0.1) 0%,
+        transparent 70%
+    );
 }
 
 .banner.bottom h2 {
@@ -508,6 +531,120 @@ a.download-button:visited {
     line-height: 1.6;
     color: rgba(225, 229, 242, 0.8);
     margin: 0;
+}
+
+/* Mobile Navigation Toggle */
+.docs-nav-toggle {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 250;
+    background: rgba(0, 85, 204, 0.95);
+    border: none;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 8px 16px 4px;
+    cursor: pointer;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    width: 32px;
+    height: 60px;
+}
+
+.docs-nav-toggle .arrow-icon {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.docs-nav-toggle:hover {
+    background: rgba(0, 85, 204, 1);
+    transform: translateY(-50%) translateX(2px);
+}
+
+.docs-nav-toggle.active .arrow-icon {
+    transform: scaleX(-1);
+}
+
+/* Documentation Mobile Styles */
+@media only screen and (max-width: 768px) {
+    .docs-nav-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .docs-container {
+        flex-direction: column;
+        padding-top: 60px;
+    }
+    
+    .docs-sidebar {
+        position: fixed !important;
+        width: 280px !important;
+        height: calc(100vh - 60px) !important;
+        top: 60px !important;
+        left: -280px !important;
+        border-right: 1px solid rgba(0, 85, 204, 0.1);
+        border-bottom: none;
+        transition: left 0.3s ease;
+        z-index: 150 !important;
+    }
+    
+    .docs-sidebar.active {
+        left: 0 !important;
+    }
+    
+    .docs-content {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 20px 20px 20px 20px;
+        box-sizing: border-box;
+        transition: margin-left 0.3s ease;
+    }
+    
+    .docs-header h1 {
+        font-size: 2rem;
+    }
+    
+    .sidebar-nav {
+        padding: 16px 0;
+    }
+    
+    .sidebar-nav .nav-link {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+    
+    .docs-text {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0;
+    }
+    
+    /* Overlay for mobile sidebar */
+    .docs-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 140;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .docs-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -658,6 +795,115 @@ a.download-button:visited {
         flex: 1;
         max-width: 60%; /* Increase image width */
     }
+}
+
+/* Documentation Layout */
+.docs-container {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 70px;
+}
+
+.docs-sidebar {
+    width: 280px;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    height: calc(100vh - 70px);
+    background: rgba(15, 15, 35, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(0, 85, 204, 0.1);
+    overflow-y: auto;
+    z-index: 10;
+}
+
+.sidebar-header {
+    padding: 32px 24px 24px;
+    border-bottom: 1px solid rgba(0, 85, 204, 0.1);
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.sidebar-nav {
+    padding: 24px 0;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    margin: 0;
+}
+
+.sidebar-nav .nav-link {
+    display: block;
+    padding: 12px 24px;
+    color: rgba(225, 229, 242, 0.8);
+    text-decoration: none;
+    font-weight: 500;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.sidebar-nav .nav-link:hover {
+    color: #ffffff;
+    background: rgba(0, 85, 204, 0.1);
+    border-left-color: rgba(0, 85, 204, 0.5);
+}
+
+.sidebar-nav .nav-link.active {
+    color: #0055CC;
+    background: rgba(0, 85, 204, 0.15);
+    border-left-color: #0055CC;
+}
+
+.docs-content {
+    flex: 1;
+    margin-left: 280px;
+    padding: 40px;
+    max-width: calc(100% - 280px);
+}
+
+.docs-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.docs-header h1 {
+    font-size: 3rem;
+    margin: 0;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.docs-text {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.docs-text h2 {
+    margin-top: 48px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(0, 85, 204, 0.2);
+}
+
+.docs-breadcrumb {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 85, 204, 0.1);
 }
 
 /* Navigation */
