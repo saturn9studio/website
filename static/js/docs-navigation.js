@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Mobile navigation toggle
     function toggleMobileNav() {
-        const arrowIcon = navToggle.querySelector('.arrow-icon');
+        const arrowIcon = navToggle ? navToggle.querySelector('.arrow-icon') : null;
         
         navToggle.classList.toggle('active');
         sidebar.classList.toggle('active');
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Close mobile navigation
     function closeMobileNav() {
-        const arrowIcon = navToggle.querySelector('.arrow-icon');
+        const arrowIcon = navToggle ? navToggle.querySelector('.arrow-icon') : null;
         
         navToggle.classList.remove('active');
         sidebar.classList.remove('active');

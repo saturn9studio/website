@@ -569,9 +569,7 @@ a.download-button:visited {
     transform: translateY(-50%) translateX(2px);
 }
 
-.docs-nav-toggle.active .arrow-icon {
-    transform: scaleX(-1);
-}
+/* Arrow direction handled by JavaScript */
 
 /* Documentation Mobile Styles */
 @media only screen and (max-width: 768px) {
