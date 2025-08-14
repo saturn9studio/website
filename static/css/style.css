@@ -9,9 +9,9 @@ body {
 }
 
 body {
-    background: linear-gradient(90deg, #1a1b26, #24283b);
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
     transition: background 0.5s ease;
-    color: #a9b1d6;
+    color: #e1e5f2;
     font-family: "Poppins", Helvetica, Arial, sans-serif;
     font-size: 20px;
     user-select: none;
@@ -49,7 +49,7 @@ body {
 
 .highlight {
     display: inline-block;
-    color: #bb9af7;
+    color: #0055CC;
     font-weight: bold;
     transition: all 0.3s ease;
 }
@@ -107,12 +107,12 @@ a:link,
 a:visited,
 a:active,
 a:hover {
-    color: #bb9af7;
+    color: #0055CC;
     -webkit-transition: all ease-in-out 0.3s;
     -moz-transition: all ease-in-out 0.3s;
     -o-transition: all ease-in-out 0.3s;
     transition: all ease-in-out 0.3s;
-    text-decoration-color: #9ece6a;
+    text-decoration-color: #10b981;
 }
 
 .header {
@@ -123,10 +123,13 @@ a:hover {
 }
 
 .footer {
-    color: #565f89;
+    color: rgba(225, 229, 242, 0.6);
     text-align: center;
     font-size: medium;
-    padding: 20px 0;
+    padding: 40px 0;
+    background: rgba(15, 15, 35, 0.8);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(0, 85, 204, 0.1);
 }
 
 .footer-container {
@@ -190,7 +193,7 @@ h1,
 h2,
 li::marker {
     color: white;
-    text-shadow: 0 2px 2px #000;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 table {
@@ -262,13 +265,18 @@ sup {
 a.download-button {
     display: inline-flex;
     align-items: center;
-    background-color: #007aff;
-    padding: 12px 24px;
-    border-radius: 8px;
+    background: linear-gradient(135deg, #0055CC 0%, #007AFF 100%);
+    padding: 16px 32px;
+    border-radius: 12px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     margin-top: 10px;
-    transition: background-color 0.2s ease;
+    box-shadow: 0 8px 32px rgba(0, 85, 204, 0.4);
+    transform: translateY(0);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 a.download-button:link,
@@ -277,7 +285,9 @@ a.download-button:visited {
 }
 
 .download-button:hover {
-    background-color: #0055cc;
+    background: linear-gradient(135deg, #0044AA 0%, #0066FF 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 85, 204, 0.6);
 }
 
 /* Sticky Navbar */
@@ -287,18 +297,21 @@ a.download-button:visited {
     left: 0;
     width: 100%;
     z-index: 999;
-    background-color: #1a1b26;
+    background: rgba(15, 15, 35, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 85, 204, 0.1);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 5px 40px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
 }
 
 .navbar .nav-logo {
     font-size: 24px;
-    color: #bb9af7;
+    color: #0055CC;
     font-weight: 700;
 }
 
@@ -320,7 +333,7 @@ a.download-button:visited {
 }
 
 .navbar a:hover {
-    color: #bb9af7;
+    color: #0055CC;
 }
 
 /* Banner */
@@ -329,54 +342,96 @@ a.download-button:visited {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 50vh;
+    height: 70vh;
     text-align: center;
-    text-align: center;
-    padding: 0 0;
-    background: linear-gradient(-45deg, #2c3e50, #3498db, #2980b9, #34495e);
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0055CC 0%, #0066FF 50%, #007AFF 100%);
     background-size: 400% 400%;
-    animation: gradient-flow 8s ease infinite;
+    animation: gradient-flow 12s ease infinite;
     transition: all 0.3s ease;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 85, 204, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 102, 255, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(0, 122, 255, 0.2) 0%, transparent 50%);
+    animation: floating-orbs 20s ease-in-out infinite;
+}
+
+@keyframes floating-orbs {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 0.8;
+    }
 }
 
 @keyframes gradient-flow {
     0% {
         background-position: 0% 50%;
-        transform: scale(1);
-    }
-    25% {
-        background-position: 50% 50%;
-        transform: scale(1.02);
     }
     50% {
         background-position: 100% 50%;
-        transform: scale(1);
-    }
-    75% {
-        background-position: 50% 50%;
-        transform: scale(1.02);
     }
     100% {
         background-position: 0% 50%;
-        transform: scale(1);
     }
 }
 
 .banner h1 {
-    font-size: 3rem;
+    font-size: 4.5rem;
+    font-weight: 800;
     color: #fff;
-    margin-bottom: 10px;
-    margin-top: 18vh;
+    margin-bottom: 24px;
+    margin-top: 0;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .banner p {
-    margin: 10px 0;
-    text-shadow: 1px 1px 2px #000;
+    margin: 0 0 32px 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
 }
 
 .banner.bottom {
-    background: linear-gradient(180deg, #2d2e3e, #24283b);
+    background: linear-gradient(135deg, #003366 0%, #0055CC 50%, #007AFF 100%);
     height: 40vh;
+    position: relative;
+}
+
+.banner.bottom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 85, 204, 0.1) 0%, transparent 70%);
 }
 
 .banner.bottom h2 {
@@ -387,10 +442,23 @@ a.download-button:visited {
 .feature-section {
     display: flex;
     justify-content: space-between;
-    margin: 80px auto;
+    align-items: center;
+    margin: 60px auto;
     max-width: 1200px;
     gap: 40px;
-    padding: 0 20px;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    border: 1px solid rgba(0, 85, 204, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.feature-section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+    border-color: rgba(0, 85, 204, 0.2);
 }
 
 .feature-section.alt {
@@ -405,8 +473,14 @@ a.download-button:visited {
 .feature-image img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.feature-image img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
 }
 
 .feature-text {
@@ -417,6 +491,25 @@ a.download-button:visited {
     width: 100%;
 }
 
+.feature-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+    line-height: 1.2;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.feature-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(225, 229, 242, 0.8);
+    margin: 0;
+}
+
 @media only screen and (max-width: 768px) {
     .feature-section,
     .feature-section.alt {
@@ -424,7 +517,8 @@ a.download-button:visited {
         align-items: center;
         margin: 30px auto;
         gap: 20px;
-        padding: 0 16px;
+        padding: 30px 20px;
+        border-radius: 16px;
     }
 
     .feature-image {
@@ -438,29 +532,33 @@ a.download-button:visited {
     }
 
     .feature-text h2 {
-        font-size: 24px;
-        margin-bottom: 12px;
+        font-size: 1.75rem;
+        margin-bottom: 16px;
+        text-align: center;
     }
 
     .feature-text p {
-        font-size: 16px;
-        line-height: 1.5;
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: center;
     }
 
     .banner {
         margin-top: 60px;
-        height: 30vh;
+        height: 50vh;
         padding: 40px 16px;
     }
 
     .banner h1 {
-        font-size: 32px;
-        margin-top: 10vh;
+        font-size: 2.5rem;
+        margin-top: 0;
+        line-height: 1.1;
     }
 
     .banner p {
-        font-size: 18px;
+        font-size: 1.125rem;
         padding: 0 16px;
+        margin-bottom: 24px;
     }
 
     .download-button {
@@ -470,7 +568,7 @@ a.download-button:visited {
     }
 
     .banner.bottom {
-        height: 20vh;
+        height: 30vh;
     }
 
     /* Make tables responsive */
