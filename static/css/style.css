@@ -105,14 +105,18 @@ img {
 
 a:link,
 a:visited,
-a:active,
-a:hover {
-    color: #0055cc;
+a:active {
+    color: #00D4FF;
     -webkit-transition: all ease-in-out 0.3s;
     -moz-transition: all ease-in-out 0.3s;
     -o-transition: all ease-in-out 0.3s;
     transition: all ease-in-out 0.3s;
-    text-decoration-color: #10b981;
+    text-decoration-color: #00D4FF;
+}
+
+a:hover {
+    color: #33E0FF;
+    text-decoration-color: #33E0FF;
 }
 
 .header {
