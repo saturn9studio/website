@@ -266,22 +266,33 @@ sup {
     vertical-align: top;
 }
 
+.download-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
 a.download-button {
     display: inline-flex;
     align-items: center;
     background: linear-gradient(135deg, #0055cc 0%, #007aff 100%);
-    padding: 16px 32px;
+    padding: 16px 24px;
     border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
-    margin-top: 10px;
     box-shadow: 0 8px 32px rgba(0, 85, 204, 0.4);
     transform: translateY(0);
     transition: all 0.3s ease;
     position: relative;
     z-index: 2;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 160px;
+    justify-content: center;
 }
+
 
 a.download-button:link,
 a.download-button:visited {
@@ -293,6 +304,7 @@ a.download-button:visited {
     transform: translateY(-2px);
     box-shadow: 0 12px 40px rgba(0, 85, 204, 0.6);
 }
+
 
 /* Sticky Navbar */
 .navbar {
@@ -699,10 +711,22 @@ a.download-button:visited {
         margin-bottom: 24px;
     }
 
+    .download-buttons {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
     .download-button {
-        width: calc(100% - 32px);
-        margin: 16px;
+        width: calc(100% - 40px);
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 14px 20px;
+        font-size: 0.9rem;
         justify-content: center;
+        box-sizing: border-box;
     }
 
     .banner.bottom {
