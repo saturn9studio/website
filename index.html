@@ -1,13 +1,101 @@
+---
+---
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset='utf-8' />
-        <title>Saturn9</title>
-        <script>
-            window.location.href = 'flow/';
-        </script>
-    </head>
-    <body>
-        <p><a href="flow/index.html">Flow</a> v0.1 is out!</p>
-    </body>
+<head>
+    <meta charset="utf-8" />
+    <title>Saturn9</title>
+    <link rel="icon" type="image/x-icon" href="static/img/s9.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+
+<body>
+    {% include navbar.html %}
+
+    <!-- Hero -->
+    <section class="hero">
+        <img src="static/img/s9.svg" alt="Saturn9 logo" class="hero-logo" />
+        <h1 class="hero-title">Saturn9</h1>
+        <p class="hero-subtitle">Story studio</p>
+        <div class="scroll-hint" id="scroll-hint">
+            <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2L12 12L22 2" stroke="rgba(255,255,255,0.5)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="product-section" data-aos="fade-up">
+        <a href="/flow/" class="product-link">
+            <div class="product-text">
+                <div class="product-header">
+                    <img src="static/img/flow.svg" alt="Flow logo" class="product-logo" />
+                    <h2>Flow</h2>
+                </div>
+                <p>The best focused writing experience.</p>
+                <p>A modern, carefully designed app meant to inspire at every step. Write in Markdown, stay in the zone with focus mode, and make it yours with beautiful themes.</p>
+                <span class="product-cta">Learn more &rarr;</span>
+            </div>
+            <div class="product-image">
+                <img src="static/img/screenshots/blank.png" alt="Flow screenshot" />
+            </div>
+        </a>
+    </section>
+
+    <section class="product-section alt" data-aos="fade-up" data-aos-delay="150">
+        <a href="/longhand/" class="product-link">
+            <div class="product-text">
+                <div class="product-header">
+                    <img src="static/img/longhand.svg" alt="Longhand logo" class="product-logo" />
+                    <h2>Longhand</h2>
+                </div>
+                <p>Your book deserves a better tool.</p>
+                <p>A beautifully crafted writing experience designed for long-form writing. Organize your manuscript, keep notes alongside your work, and export when you're ready.</p>
+                <span class="product-cta">Coming soon</span>
+            </div>
+        </a>
+    </section>
+
+    <section class="product-section" data-aos="fade-up" data-aos-delay="300">
+        <a href="https://saturn9.press/" target="_blank" class="product-link">
+            <div class="product-text">
+                <div class="product-header">
+                    <img src="static/img/press.svg" alt="Saturn9 Press logo" class="product-logo" />
+                    <h2>Saturn9 Press</h2>
+                </div>
+                <p>Independent publishing imprint.</p>
+                <p>Saturn9 Press is how we bring stories from screen to page.</p>
+                <span class="product-cta">Visit saturn9.press &rarr;</span>
+            </div>
+            <div class="product-image">
+                <img src="static/img/sector-36-cover.jpg" alt="Sector 36 book cover" />
+            </div>
+        </a>
+    </section>
+
+    {% include footer.html %}
+
+    <script src="static/js/navigation.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            easing: 'ease-in-out',
+            delay: 100,
+            once: false,
+        });
+
+        const scrollHint = document.getElementById('scroll-hint');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                scrollHint.classList.add('hidden');
+            } else {
+                scrollHint.classList.remove('hidden');
+            }
+        });
+    </script>
+</body>
 </html>

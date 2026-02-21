@@ -359,6 +359,169 @@ a.download-button:visited {
     border: 1px solid rgba(0, 85, 204, 0.3);
 }
 
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 120px 20px 40px;
+}
+
+.hero-logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 32px;
+    filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.3));
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0 0 12px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #c7d2fe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    font-size: 1.35rem;
+    color: rgba(225, 229, 242, 0.7);
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.scroll-hint {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s ease-in-out infinite;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.scroll-hint.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* Product Sections */
+.product-section {
+    display: flex;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 900px;
+    gap: 40px;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product-section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+    border-color: rgba(0, 85, 204, 0.2);
+}
+
+.product-section.alt .product-link {
+    flex-direction: row-reverse;
+}
+
+.product-link {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.product-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.product-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.product-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.product-section h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+}
+
+.product-section p {
+    font-size: 1.05rem;
+    color: rgba(225, 229, 242, 0.75);
+    line-height: 1.7;
+    margin: 0 0 20px 0;
+}
+
+.product-cta {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #7c9deb;
+    transition: color 0.3s ease;
+}
+
+.product-section:hover .product-cta {
+    color: #a5b4fc;
+}
+
+.product-image {
+    flex: 1;
+    max-width: 480px;
+    max-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 280px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
 /* Banner */
 .banner {
     display: flex;
@@ -370,7 +533,7 @@ a.download-button:visited {
     padding: 0;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #0055cc 0%, #0066ff 50%, #007aff 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
     background-size: 400% 400%;
     animation: gradient-flow 12s ease infinite;
     transition: all 0.3s ease;
@@ -385,17 +548,17 @@ a.download-button:visited {
     bottom: 0;
     background: radial-gradient(
             circle at 20% 80%,
-            rgba(0, 85, 204, 0.3) 0%,
+            rgba(49, 46, 129, 0.4) 0%,
             transparent 50%
         ),
         radial-gradient(
             circle at 80% 20%,
-            rgba(0, 102, 255, 0.3) 0%,
+            rgba(67, 56, 202, 0.3) 0%,
             transparent 50%
         ),
         radial-gradient(
             circle at 40% 40%,
-            rgba(0, 122, 255, 0.2) 0%,
+            rgba(79, 70, 229, 0.2) 0%,
             transparent 50%
         );
     animation: floating-orbs 20s ease-in-out infinite;
@@ -425,12 +588,29 @@ a.download-button:visited {
     }
 }
 
+.banner-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    z-index: 2;
+    margin-top: 80px;
+    margin-bottom: 24px;
+}
+
+.banner-logo {
+    width: 72px;
+    height: 72px;
+    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
+}
+
 .banner h1 {
     font-size: 4.5rem;
     font-weight: 800;
     color: #fff;
-    margin-bottom: 24px;
-    margin-top: 80px;
+    margin-bottom: 0;
+    margin-top: 0;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     letter-spacing: -0.02em;
     position: relative;
@@ -454,7 +634,7 @@ a.download-button:visited {
 }
 
 .banner.bottom {
-    background: linear-gradient(135deg, #003366 0%, #0055cc 50%, #007aff 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
     height: 40vh;
     position: relative;
 }
@@ -468,13 +648,66 @@ a.download-button:visited {
     bottom: 0;
     background: radial-gradient(
         circle at 50% 50%,
-        rgba(0, 85, 204, 0.1) 0%,
+        rgba(49, 46, 129, 0.15) 0%,
         transparent 70%
     );
 }
 
 .banner.bottom h2 {
     margin-top: 0;
+}
+
+/* Features Grid */
+.features-grid {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 30px;
+}
+
+.features-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 48px;
+    background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 36px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: rgba(225, 229, 242, 0.8);
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* Feature Sections */
@@ -661,6 +894,54 @@ a.download-button:visited {
 }
 
 @media only screen and (max-width: 768px) {
+    .hero {
+        min-height: 45vh;
+        padding: 100px 16px 24px;
+    }
+
+    .hero-logo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .product-section {
+        margin: 20px 16px;
+        padding: 28px 20px;
+        border-radius: 16px;
+    }
+
+    .product-link,
+    .product-section.alt .product-link {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .product-image {
+        max-width: 100%;
+    }
+
+    .product-header {
+        gap: 12px;
+    }
+
+    .product-logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    .product-section h2 {
+        font-size: 1.35rem;
+    }
+
     .feature-section,
     .feature-section.alt {
         flex-direction: column;
@@ -699,6 +980,15 @@ a.download-button:visited {
         padding: 40px 16px;
     }
 
+    .banner-title {
+        margin-top: 0;
+    }
+
+    .banner-logo {
+        width: 48px;
+        height: 48px;
+    }
+
     .banner h1 {
         font-size: 2.5rem;
         margin-top: 0;
@@ -731,6 +1021,25 @@ a.download-button:visited {
 
     .banner.bottom {
         height: 30vh;
+    }
+
+    .features-grid {
+        margin: 40px auto;
+        padding: 0 16px;
+    }
+
+    .features-heading {
+        font-size: 1.75rem;
+        margin-bottom: 32px;
+    }
+
+    .features-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 24px;
     }
 
     /* Make tables responsive */
