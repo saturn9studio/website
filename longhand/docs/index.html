@@ -1,0 +1,495 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Longhand Documentation</title>
+        <link rel="icon" type="image/x-icon" href="../../static/img/s9.svg" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Custom style -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="../../static/css/style.css"
+        />
+    </head>
+    <body>
+        {% include navbar-longhand.html %}
+
+        <!-- Mobile Overlay -->
+        <div class="docs-overlay" id="docsOverlay"></div>
+
+        <!-- Mobile Navigation Toggle -->
+        <button class="docs-nav-toggle" id="docsNavToggle">
+            <span class="arrow-icon">→</span>
+        </button>
+
+        <div class="docs-container">
+            <!-- Sidebar Navigation -->
+            <aside class="docs-sidebar" id="docsSidebar">
+                <div class="sidebar-header">
+                    <h3>Documentation</h3>
+                </div>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="#features" class="nav-link">Features</a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="nav-link">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#editor-modes" class="nav-link"
+                                >Editor Modes</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#markdown" class="nav-link">Markdown</a>
+                        </li>
+                        <li>
+                            <a href="#tools" class="nav-link">Tools</a>
+                        </li>
+                        <li>
+                            <a href="#clipboard" class="nav-link">Clipboard</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="docs-content">
+                <div class="docs-text">
+                    <h2 id="features">Features</h2>
+                    <p>
+                        Longhand is a text editor built for professional authors
+                        and optimized for long-form writing. It provides a
+                        focused, beautifully designed writing experience with
+                        project-based organization to help you take your
+                        manuscript from first draft to final form.
+                    </p>
+                    <p>
+                        Longhand organizes your work into
+                        <a href="#projects">projects</a>. Each project keeps
+                        your manuscript chapters and research notes together in
+                        one place. Drag and drop to rearrange chapters, nest
+                        files for organization, and keep reference notes at your
+                        fingertips.
+                    </p>
+                    <p>
+                        Three <a href="#editor-modes">editor modes</a> let you
+                        switch between writing, reading, and fully immersive
+                        focused writing. All changes are
+                        <b>automatically saved</b> as you type, so you never
+                        have to worry about losing your work.
+                    </p>
+                    <p>
+                        <b>Auto-backup</b> preserves previous versions of your
+                        files. Whenever you open a file, a snapshot of its
+                        current state is saved. You can browse and restore older
+                        versions at any time using the
+                        <a href="#tools">Version History</a> tool.
+                    </p>
+                    <p>
+                        <b>Themes</b> let you personalize the look of the
+                        editor. Choose from 18 themes including light, dark,
+                        and specialty options like Solarized, Nord, Dracula, and
+                        Tokyo Night. Additional settings let you customize the
+                        font, font size, line height, paragraph spacing,
+                        auto-indentation, and spell checking.
+                    </p>
+                    <hr />
+                    <h2 id="projects">Projects</h2>
+                    <p>
+                        A project is a folder on disk that contains your
+                        manuscript, notes, and project metadata. When you create
+                        a new project (<code>File &gt; New Project</code>), you
+                        select or create a folder and give the project a name.
+                    </p>
+                    <h3>Manuscript</h3>
+                    <p>
+                        The manuscript section holds the content of your book.
+                        Each chapter is a separate Markdown file. You can create
+                        new chapters from the navigator panel. New chapters
+                        start with a default heading that you can edit — when
+                        you change the heading, the file is automatically
+                        renamed to match.
+                    </p>
+                    <h3>Notes</h3>
+                    <p>
+                        Notes are for your research, character details, plot
+                        outlines, worldbuilding, and any other reference
+                        material. They are kept separate from the manuscript so
+                        they stay organized and out of the way.
+                    </p>
+                    <h3>Organizing your project</h3>
+                    <p>
+                        The navigator panel on the left side of the screen shows
+                        your project structure. You can:
+                    </p>
+                    <ul>
+                        <li>
+                            <b>Drag and drop</b> to reorder chapters and notes.
+                            Drop before or after an item to reorder, or drop
+                            onto an item to nest it as a child.
+                        </li>
+                        <li>
+                            <b>Collapse and expand</b> groups using the chevron
+                            icon.
+                        </li>
+                        <li>
+                            <b>Right-click</b> to rename or delete files.
+                        </li>
+                    </ul>
+                    <p>
+                        Clicking a file in the navigator opens it in the editor.
+                        Any pending changes to the previous file are
+                        automatically saved before switching.
+                    </p>
+                    <hr />
+                    <h2 id="editor-modes">Editor modes</h2>
+                    <h3 class="editor-mode">
+                        <span>Editing Mode</span>
+                    </h3>
+                    <p>
+                        Editing mode is the default mode. The full user
+                        interface is available: the navigator panel on the left,
+                        the tool panel on the right, and the status bar at the
+                        bottom. Markdown annotations are revealed when the
+                        cursor is on them, but otherwise stay hidden.
+                        Auto-indentation and spellchecking are enabled. The
+                        status bar shows the file path and word count.
+                    </p>
+                    <p>
+                        Switch to editing mode with
+                        <code>Cmd+1</code>.
+                    </p>
+                    <h3 class="editor-mode">
+                        <span>Reading Mode</span>
+                    </h3>
+                    <p>
+                        Reading mode provides a unified view of your entire
+                        manuscript. All chapters are assembled into a single
+                        scrollable, read-only document with chapter headings
+                        and separators. The navigator panel is hidden so you
+                        can focus on reading. The status bar shows your chapter
+                        progress ("Chapter 1 of 5 — Title") and the total
+                        manuscript word count.
+                    </p>
+                    <p>
+                        Switch to reading mode with
+                        <code>Cmd+2</code>.
+                    </p>
+                    <h3 class="editor-mode">
+                        <span>Focused Mode</span>
+                    </h3>
+                    <p>
+                        Focused mode provides the ultimate distraction-free
+                        writing experience. The app enters full screen and all
+                        UI chrome is hidden — no navigator, no tool panel, no
+                        status bar. Press <code>ESC</code> to exit focused mode
+                        and return to your previous mode.
+                    </p>
+                    <p>
+                        Switch to focused mode with
+                        <code>Cmd+3</code>.
+                    </p>
+                    <hr />
+                    <h2 id="markdown">Markdown</h2>
+                    <p>
+                        Markdown is a lightweight markup language with plain
+                        text formatting syntax. Its design allows it to be
+                        converted to many output formats. Markdown is a modern
+                        way to create rich text documents using plain text. It
+                        is particularly well suited for distraction-free writing
+                        as inline annotations help keep you in the flow when
+                        writing.
+                    </p>
+                    <p>Below is a quick reference of the supported features:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Markup syntax</th>
+                                <th>How it looks like</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Markup syntax"># Heading 1</td>
+                                <td data-label="How it looks like">
+                                    <h1 style="text-shadow: none">Heading 1</h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">## Heading 2</td>
+                                <td data-label="How it looks like">
+                                    <h2 style="text-shadow: none">Heading 2</h2>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    ### Heading 3
+                                </td>
+                                <td data-label="How it looks like">
+                                    <h3>Heading 3</h3>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    #### Heading 4
+                                </td>
+                                <td data-label="How it looks like">
+                                    <h4>Heading 4</h4>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    ##### Heading 5
+                                </td>
+                                <td data-label="How it looks like">
+                                    <h5>Heading 5</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    ###### Heading 6
+                                </td>
+                                <td data-label="How it looks like">
+                                    <h6>Heading 6</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">**Bold**</td>
+                                <td data-label="How it looks like">
+                                    <strong>Bold</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">*Italic*</td>
+                                <td data-label="How it looks like">
+                                    <em>Italic</em>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">~Underline~</td>
+                                <td data-label="How it looks like">
+                                    <u>Underline</u>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    ~~Strikethrough~~
+                                </td>
+                                <td data-label="How it looks like">
+                                    <del>Strikethrough</del>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    ==Highlight==
+                                </td>
+                                <td data-label="How it looks like">
+                                    <mark style="background-color: rgba(250, 204, 21, 0.35)">Highlight</mark>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    ==🟨Highlight==
+                                </td>
+                                <td data-label="How it looks like">
+                                    <mark style="background-color: rgba(250, 204, 21, 0.35)">Yellow</mark>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    ==🟩Highlight==
+                                </td>
+                                <td data-label="How it looks like">
+                                    <mark style="background-color: rgba(74, 222, 128, 0.35)">Lime green</mark>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    ==🟥Highlight==
+                                </td>
+                                <td data-label="How it looks like">
+                                    <mark style="background-color: rgba(251, 113, 133, 0.35)">Pink</mark>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    ==🟦Highlight==
+                                </td>
+                                <td data-label="How it looks like">
+                                    <mark style="background-color: rgba(96, 165, 250, 0.35)">Blue</mark>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    ==🟧Highlight==
+                                </td>
+                                <td data-label="How it looks like">
+                                    <mark style="background-color: rgba(251, 146, 60, 0.35)">Orange</mark>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    ==🟪Highlight==
+                                </td>
+                                <td data-label="How it looks like">
+                                    <mark style="background-color: rgba(192, 132, 252, 0.35)">Purple</mark>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">`Code`</td>
+                                <td data-label="How it looks like">
+                                    <code>Code</code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    &gt; Block quote
+                                </td>
+                                <td data-label="How it looks like">
+                                    <blockquote>Block quote</blockquote>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    1. Ordered list
+                                </td>
+                                <td data-label="How it looks like">
+                                    <ol>
+                                        <li>Ordered list</li>
+                                    </ol>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    * Unordered list
+                                </td>
+                                <td data-label="How it looks like">
+                                    <ul>
+                                        <li>Unordered list</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    ---
+                                    <span class="faded">(line separator)</span>
+                                </td>
+                                <td data-label="How it looks like"><hr /></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <p>
+                        You can also mix markup as needed. ***Bold italic***
+                        becomes <b><em>Bold italic</em></b
+                        >.
+                    </p>
+                    <h3>Colored highlights</h3>
+                    <p>
+                        Longhand extends the standard <code>==highlight==</code>
+                        syntax with colored highlights. Place a color emoji
+                        immediately after the opening <code>==</code> to choose
+                        a color: yellow (🟨), green (🟩), pink (🟥), blue (🟦),
+                        orange (🟧), or purple (🟪). Without an emoji,
+                        highlights default to yellow.
+                    </p>
+                    <p>
+                        The markup and color emoji are hidden when the cursor is
+                        away from the highlighted text. When you place the
+                        cursor on a highlight, a marker pen icon appears — click
+                        it to change the highlight color.
+                    </p>
+                    <p>
+                        Common Markdown has some special requirements, like
+                        separating paragraphs with two newlines. Longhand works
+                        differently: the editor displays text like a print book,
+                        continuous and without requiring extra blank lines. At
+                        the same time, when saved to a file, Longhand will
+                        convert this to the common Markdown syntax to maintain
+                        compatibility.
+                    </p>
+                    <hr />
+                    <h2 id="tools">Tools</h2>
+                    <p>
+                        The tool panel on the right side of the screen hosts
+                        auxiliary tools that assist your writing. Click a tool
+                        icon to activate it; click it again to hide the panel.
+                        Tools are available in editing mode and reading mode.
+                    </p>
+                    <h3>Minimap</h3>
+                    <p>
+                        The minimap shows a scaled-down view of the entire
+                        document, giving you a bird's-eye view of its structure.
+                        A viewport indicator shows your current scroll position.
+                        Click anywhere on the minimap to jump to that section,
+                        or drag the viewport indicator to scroll through the
+                        document.
+                    </p>
+                    <h3>Version History</h3>
+                    <p>
+                        Version history shows saved snapshots of the current
+                        file. Longhand automatically creates a snapshot whenever
+                        you open a file, so previous versions are always
+                        preserved.
+                    </p>
+                    <p>
+                        Click a snapshot to preview it without changing your
+                        working copy. From any snapshot, you can
+                        <b>restore</b> it (which saves your current version as
+                        a snapshot first, so nothing is lost) or
+                        <b>delete</b> it. Click "Current Version" to return to
+                        your working copy.
+                    </p>
+                    <h3>Grammar Checker</h3>
+                    <p>
+                        The grammar checker analyzes your text and surfaces
+                        issues grouped by category: grammar, style, punctuation,
+                        capitalization, and readability. Each issue shows the
+                        problem in context along with suggested fixes. Click an
+                        issue to jump to it in the editor, or click a suggestion
+                        to apply the fix.
+                    </p>
+                    <h3>Export</h3>
+                    <p>
+                        Export your documents to PDF or Word (DOCX). Select
+                        your format from the dropdown and click Export to save
+                        the file. In <b>editing mode</b>, the current file is
+                        exported. In <b>reading mode</b>, the entire assembled
+                        manuscript is exported as a single document. Line
+                        separators (<code>---</code> and <code>***</code>)
+                        become page breaks in the exported file.
+                    </p>
+                    <hr />
+                    <h2 id="clipboard">Clipboard</h2>
+                    <p>
+                        An important note on how Longhand leverages the
+                        clipboard: copying text in Longhand will put both text
+                        and HTML on the clipboard. If you then paste in a plain
+                        text editor, you will see the Markdown content, including
+                        markup characters like <code>*</code>. On the other
+                        hand, if you paste this in a rich text editor like Word,
+                        you will get rich text, already formatted.
+                    </p>
+                    <p>
+                        Similarly, if you paste formatted HTML from the
+                        clipboard, Longhand will convert this to Markdown and
+                        try to match the formatting of the clipboard content.
+                    </p>
+                </div>
+            </main>
+        </div>
+
+        {% include footer.html %}
+
+        <script src="../../static/js/navigation.js"></script>
+        <script src="../../static/js/docs-navigation.js"></script>
+    </body>
+</html>
