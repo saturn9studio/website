@@ -678,7 +678,6 @@ a.download-button:visited {
     height: auto;
     object-fit: contain;
     border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 /* Banner */
@@ -904,13 +903,11 @@ a.download-button:visited {
 .feature-image img {
     width: 100%;
     height: auto;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
 
 .feature-image img:hover {
     transform: scale(1.02);
-    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
 }
 
 .feature-text {
