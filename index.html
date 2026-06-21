@@ -83,6 +83,38 @@
     </section>
 
     <section class="product-section" data-aos="fade-up" data-aos-delay="300">
+        <a href="/technology/" class="product-link">
+            <div class="product-text">
+                <div class="product-header">
+                    <div class="product-logo product-logo-code">{ }</div>
+                    <h2>Technology</h2>
+                </div>
+                <p>Open-source foundations for better writing tools.</p>
+                <p>Markoffset and Scribeframe are the Markdown parser and editor engine powering the next generation of Saturn9 writing apps.</p>
+                <span class="product-cta">Explore the stack &rarr;</span>
+            </div>
+            <div class="product-image technology-preview">
+                <pre class="technology-code"><code><span class="code-keyword">import</span> { <span class="code-binding">gfmParser</span>, <span class="code-function">parseDocument</span> } <span class="code-keyword">from</span> <span class="code-string">"@saturn9/markoffset"</span>;
+<span class="code-keyword">import</span> { <span class="code-binding">ScribeFrame</span> } <span class="code-keyword">from</span> <span class="code-string">"@saturn9/scribeframe"</span>;
+
+<span class="code-keyword">const</span> <span class="code-binding">markdown</span> = <span class="code-string">"# Hello, Saturn9"</span>;
+<span class="code-keyword">let</span> <span class="code-binding">parsed</span> = <span class="code-function">parseDocument</span>(gfmParser, markdown);
+
+<span class="code-keyword">const</span> <span class="code-binding">host</span> = document.<span class="code-function">getElementById</span>(<span class="code-string">"editor"</span>);
+<span class="code-keyword">if</span> (!host) <span class="code-keyword">throw new</span> <span class="code-function">Error</span>(<span class="code-string">"Editor host not found"</span>);
+
+<span class="code-keyword">const</span> <span class="code-binding">editor</span> = <span class="code-keyword">new</span> <span class="code-function">ScribeFrame</span>(host, {
+  <span class="code-property">content</span>: markdown,
+  <span class="code-property">onChange</span>: () =&gt; {
+    parsed = <span class="code-function">parseDocument</span>(gfmParser, editor.<span class="code-function">getContent</span>());
+    console.<span class="code-function">log</span>(parsed.<span class="code-property">tokens</span>);
+  },
+});</code></pre>
+            </div>
+        </a>
+    </section>
+
+    <section class="product-section alt" data-aos="fade-up" data-aos-delay="450">
         <a href="https://saturn9.press/" target="_blank" class="product-link">
             <div class="product-text">
                 <div class="product-header">

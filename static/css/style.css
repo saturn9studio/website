@@ -645,6 +645,18 @@ a.download-button:visited {
     flex-shrink: 0;
 }
 
+.product-logo-code,
+.technology-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(124, 157, 235, 0.22), rgba(165, 180, 252, 0.08));
+    border: 1px solid rgba(165, 180, 252, 0.24);
+    color: #c7d2fe;
+    font-family: "Source Code Pro", monospace;
+    font-weight: 700;
+}
+
 .product-section h2 {
     font-size: 1.75rem;
     font-weight: 700;
@@ -672,7 +684,7 @@ a.download-button:visited {
 
 .product-image {
     flex: 1;
-    max-width: 480px;
+    max-width: 500px;
     max-height: 280px;
     display: flex;
     align-items: center;
@@ -686,6 +698,96 @@ a.download-button:visited {
     height: auto;
     object-fit: contain;
     border-radius: 12px;
+}
+
+.technology-preview {
+    min-height: 220px;
+}
+
+.technology-card-visual {
+    width: 100%;
+}
+
+.technology-preview-card {
+    display: grid;
+    gap: 12px;
+    width: min(340px, 100%);
+    padding: 28px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(10, 10, 26, 0.9), rgba(30, 27, 75, 0.55));
+    border: 1px solid rgba(165, 180, 252, 0.18);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.technology-preview-card span {
+    display: block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    color: rgba(225, 229, 242, 0.82);
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    font-family: "Source Code Pro", monospace;
+    font-size: 0.9rem;
+}
+
+.technology-code {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 480px;
+    margin: 0;
+    padding: 18px 12px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(10, 10, 26, 0.92), rgba(30, 27, 75, 0.58));
+    border: 1px solid rgba(165, 180, 252, 0.18);
+    box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    color: rgba(225, 229, 242, 0.76);
+    font-family: "Source Code Pro", monospace;
+    font-size: 0.66rem;
+    line-height: 1.5;
+    overflow-x: auto;
+    user-select: text;
+    -webkit-user-select: text;
+}
+
+.technology-code code {
+    display: block;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    white-space: pre;
+}
+
+.technology-code .code-keyword {
+    color: #c4b5fd;
+    font-weight: 400;
+}
+
+.technology-code .code-binding {
+    color: #bfdbfe;
+    font-weight: 400;
+}
+
+.technology-code .code-function {
+    color: #93c5fd;
+    font-weight: 400;
+}
+
+.technology-code .code-property {
+    color: #86efac;
+    font-weight: 400;
+}
+
+.technology-code .code-string {
+    color: #fca5a5;
+    font-weight: 400;
+}
+
+.technology-code .code-number {
+    color: #fcd34d;
+    font-weight: 400;
 }
 
 /* Banner */
@@ -769,6 +871,85 @@ a.download-button:visited {
     width: 72px;
     height: 72px;
     filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
+}
+
+.technology-logo {
+    width: 72px;
+    height: 72px;
+    margin: 0;
+    border-radius: 18px;
+    font-size: 1.4rem;
+    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
+}
+
+.technology-banner {
+    height: 56vh;
+}
+
+.technology-intro {
+    max-width: 760px;
+    margin: 80px auto;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.technology-intro h2 {
+    font-size: 2rem;
+    margin: 0 0 18px 0;
+    color: #ffffff;
+}
+
+.technology-intro p {
+    color: rgba(225, 229, 242, 0.72);
+    line-height: 1.8;
+    margin: 0;
+}
+
+.technology-card-label {
+    color: #a5b4fc;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.technology-feature {
+    min-height: auto;
+}
+
+.technology-feature .feature-text {
+    flex: 0.9 1 0;
+}
+
+.technology-feature .feature-image {
+    flex: 1.15 1 0;
+}
+
+.technology-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.technology-actions a {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(165, 180, 252, 0.22);
+    background: rgba(124, 157, 235, 0.08);
+    color: #c7d2fe;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.technology-actions a:hover {
+    background: rgba(124, 157, 235, 0.14);
+    border-color: rgba(165, 180, 252, 0.36);
+    color: #ffffff;
 }
 
 .banner h1 {
@@ -883,7 +1064,7 @@ a.download-button:visited {
     justify-content: space-between;
     align-items: center;
     margin: 60px auto;
-    max-width: 1200px;
+    max-width: 900px;
     gap: 40px;
     padding: 40px 30px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
@@ -907,12 +1088,20 @@ a.download-button:visited {
 
 .feature-image {
     flex: 1;
-    width: 560px;
+    max-width: 480px;
+    max-height: 280px;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .feature-image img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 280px;
+    width: auto;
     height: auto;
+    object-fit: contain;
     transition: all 0.3s ease;
 }
 
@@ -924,7 +1113,9 @@ a.download-button:visited {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 600px;
+    flex: 1;
+    min-width: 0;
+    max-width: 520px;
     width: 100%;
 }
 
@@ -1106,6 +1297,23 @@ a.download-button:visited {
 
     .product-section h2 {
         font-size: 1.35rem;
+    }
+
+    .technology-banner {
+        height: 48vh;
+    }
+
+    .technology-intro {
+        margin: 48px auto;
+        padding: 0 18px;
+    }
+
+    .technology-intro h2 {
+        font-size: 1.5rem;
+    }
+
+    .technology-actions {
+        gap: 10px;
     }
 
     .feature-section,
@@ -1306,12 +1514,13 @@ a.download-button:visited {
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .feature-section {
-        padding: 0 32px;
-        gap: 32px;
+        padding: 32px 24px;
+        gap: 24px;
     }
 
     .feature-text {
-        max-width: 40%;
+        flex: 1 1 0;
+        max-width: none;
         font-size: 16px; /* Reduce text size */
     }
 
@@ -1321,8 +1530,12 @@ a.download-button:visited {
     }
 
     .feature-image {
-        flex: 1;
-        max-width: 60%; /* Increase image width */
+        flex: 1 1 0;
+        max-width: 360px;
+    }
+
+    .technology-feature {
+        padding: 32px 24px;
     }
 }
 

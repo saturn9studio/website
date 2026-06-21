@@ -1,0 +1,105 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Technology</title>
+    <link rel="icon" type="image/x-icon" href="../static/img/s9.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+
+<body>
+    {% include navbar.html %}
+
+    <section class="banner technology-banner">
+        <div class="banner-title">
+            <div class="banner-logo technology-logo">{ }</div>
+            <h1>Technology</h1>
+        </div>
+        <p>Open-source foundations for writing tools.</p>
+    </section>
+
+    <section class="technology-intro" data-aos="fade-up">
+        <h2>Built for authors, shared with builders.</h2>
+        <p>Saturn9 writing apps are built on small, focused packages that keep editing fast, predictable, and format-aware.</p>
+    </section>
+
+    <section class="feature-section technology-feature" data-aos="fade-right">
+        <div class="feature-text">
+            <div class="technology-card-label">Markdown parser</div>
+            <h2>Markoffset</h2>
+            <p>A fast, plugin-based Markdown parser that keeps source offsets attached to every token for editor and analysis workflows.</p>
+            <p>CommonMark and GitHub Flavored Markdown presets are built from composable block, inline, delimiter, and extension rules.</p>
+            <div class="technology-actions">
+                <a href="https://github.com/saturn9studio/markoffset" target="_blank">GitHub</a>
+                <a href="https://www.npmjs.com/package/@saturn9/markoffset" target="_blank">npm</a>
+            </div>
+        </div>
+        <div class="feature-image technology-card-visual">
+            <pre class="technology-code"><code><span class="code-keyword">import</span> {
+    <span class="code-binding">gfmParser</span>,
+    <span class="code-function">parseDocument</span>,
+    <span class="code-function">reparse</span>,
+} <span class="code-keyword">from</span> <span class="code-string">'@saturn9/markoffset'</span>;
+
+<span class="code-keyword">let</span> <span class="code-binding">state</span> = <span class="code-function">parseDocument</span>(gfmParser, initialMarkdown);
+
+state = <span class="code-function">reparse</span>(gfmParser, state, {
+    <span class="code-property">from</span>: <span class="code-number">42</span>,
+    <span class="code-property">to</span>: <span class="code-number">47</span>,
+    <span class="code-property">insert</span>: <span class="code-string">'updated text'</span>,
+});
+
+console.<span class="code-function">log</span>(state.<span class="code-property">tokens</span>);</code></pre>
+        </div>
+    </section>
+
+    <section class="feature-section alt technology-feature" data-aos="fade-left">
+        <div class="feature-text">
+            <div class="technology-card-label">Editor engine</div>
+            <h2>Scribeframe</h2>
+            <p>A format-agnostic text editor runtime with owned document state, input, rendering, history, plugins, and widget lifecycle.</p>
+            <p>Scribeframe provides transaction-based editing, virtualized rendering, stable selection, and renderer-owned widgets.</p>
+            <div class="technology-actions">
+                <a href="https://github.com/saturn9studio/scribeframe" target="_blank">GitHub</a>
+                <a href="https://www.npmjs.com/package/@saturn9/scribeframe" target="_blank">npm</a>
+                <a href="https://saturn9studio.github.io/scribeframe/" target="_blank">Live demo</a>
+            </div>
+        </div>
+        <div class="feature-image technology-card-visual">
+            <pre class="technology-code"><code><span class="code-keyword">import</span> { <span class="code-binding">ScribeFrame</span> } <span class="code-keyword">from</span> <span class="code-string">"@saturn9/scribeframe"</span>;
+<span class="code-keyword">import</span> <span class="code-string">"@saturn9/scribeframe/styles.css"</span>;
+
+<span class="code-keyword">const</span> <span class="code-binding">host</span> = document.<span class="code-function">querySelector</span>&lt;HTMLElement&gt;(
+  <span class="code-string">"#editor"</span>,
+);
+<span class="code-keyword">if</span> (!host) <span class="code-keyword">throw new</span> <span class="code-function">Error</span>(<span class="code-string">"Editor host not found"</span>);
+
+<span class="code-keyword">const</span> <span class="code-binding">editor</span> = <span class="code-keyword">new</span> <span class="code-function">ScribeFrame</span>(host, {
+  <span class="code-property">content</span>: <span class="code-string">"Hello, Scribeframe"</span>,
+  <span class="code-property">ariaLabel</span>: <span class="code-string">"Document editor"</span>,
+  <span class="code-property">onChange</span>: (state) =&gt; {
+    console.<span class="code-function">log</span>(state.<span class="code-property">content</span>);
+  },
+});</code></pre>
+        </div>
+    </section>
+
+    {% include footer.html %}
+
+    <script src="../static/js/navigation.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1600,
+            easing: 'ease-in-out',
+            delay: 150,
+            once: false,
+        });
+    </script>
+</body>
+</html>
