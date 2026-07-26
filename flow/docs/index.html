@@ -253,6 +253,14 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td data-label="Markup syntax">$x^2 + 1$</td>
+                                <td data-label="How it looks like">
+                                    <span role="math" aria-label="x squared plus 1"
+                                        ><var>x</var><sup>2</sup> + 1</span
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
                                 <td data-label="Markup syntax">
                                     &gt; Block quote
                                 </td>
@@ -341,12 +349,126 @@
                                     </pre>
                                 </td>
                             </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    | A | B |<br />
+                                    | --- | --- |<br />
+                                    | 1 | 2 |
+                                </td>
+                                <td data-label="How it looks like">
+                                    <div
+                                        role="table"
+                                        aria-label="Example table"
+                                        style="
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                            border: 1px solid #565f89;
+                                        "
+                                    >
+                                        <span
+                                            style="
+                                                border-right: 1px solid #565f89;
+                                                border-bottom: 1px solid #565f89;
+                                                padding: 5px;
+                                                font-weight: bold;
+                                            "
+                                            >A</span
+                                        >
+                                        <span
+                                            style="
+                                                border-bottom: 1px solid #565f89;
+                                                padding: 5px;
+                                                font-weight: bold;
+                                            "
+                                            >B</span
+                                        >
+                                        <span
+                                            style="
+                                                border-right: 1px solid #565f89;
+                                                padding: 5px;
+                                            "
+                                            >1</span
+                                        >
+                                        <span style="padding: 5px">2</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="Markup syntax">
+                                    $$<br />
+                                    \frac{a}{b}<br />
+                                    $$
+                                </td>
+                                <td
+                                    data-label="How it looks like"
+                                    style="text-align: center"
+                                >
+                                    <span role="math" aria-label="a over b">
+                                        <span
+                                            style="
+                                                display: inline-flex;
+                                                flex-direction: column;
+                                                align-items: center;
+                                                line-height: 1.1;
+                                            "
+                                        >
+                                            <span>a</span>
+                                            <span
+                                                style="
+                                                    border-top: 1px solid currentColor;
+                                                    padding: 0 0.4em;
+                                                "
+                                                >b</span
+                                            >
+                                        </span>
+                                    </span>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                     <p>
                         You can also mix markup as needed. ***Bold italic***
                         becomes <b><em>Bold italic</em></b
                         >.
+                    </p>
+                    <h3>Tables</h3>
+                    <p>
+                        Flow supports GitHub Flavored Markdown pipe tables. Type
+                        the table syntax directly, or use
+                        <code>Insert &gt; Table</code> to create a starter table.
+                        Edit, Focus, and Read modes show an editable table
+                        widget; Source Mode shows the underlying Markdown.
+                    </p>
+                    <p>
+                        While editing a table, use <code>Tab</code> and
+                        <code>Shift+Tab</code> to move between cells, arrow keys
+                        to move across rows and columns, and <code>Enter</code>
+                        in the last cell to add a new row. Right-click a cell, or
+                        press <code>Shift+F10</code>, to insert or delete rows
+                        and columns, change column alignment, or delete the
+                        table. Inline formatting, links, and inline equations
+                        are available inside table cells.
+                    </p>
+                    <h3>Equations</h3>
+                    <p>
+                        Flow supports TeX-style equations. Use single dollar
+                        signs for inline math, such as
+                        <code>$x^2 + 1$</code>. Use standalone
+                        <code>$$</code> lines for display math:
+                    </p>
+                    <pre
+                        style="
+                            white-space: pre-wrap;
+                            background-color: #1a1b26;
+                            font-size: 0.9em;
+                        "
+                    >$$
+\frac{a}{b}
+$$</pre>
+                    <p>
+                        You can also use <code>Insert &gt; Inline Math</code> and
+                        <code>Insert &gt; Math Block</code>. Math blocks open a
+                        TeX source editor with a live rendered preview.
                     </p>
                     <p>
                         Common Markdown has some special requirements, like
@@ -359,14 +481,14 @@
                         documents created with other apps, while still providing
                         a beautiful rendering of the text.
                     </p>
-                    <p>
-                        Additional Markdown features are coming soon, see
-                        <a href="../roadmap/">the roadmap</a>.
-                    </p>
                     <hr />
                     <h2 id="export">Export</h2>
                     <p>
                         Flow can export your documents to PDF and Docx.
+                    </p>
+                    <p>
+                        Tables are exported as real document tables, and
+                        equations are rendered in the exported document.
                     </p>
                     <p>
                         Exporting to PDF will create a print-ready document.
