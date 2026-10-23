@@ -1,0 +1,18 @@
+<header class="site-header container">
+    <a class="brand" href="/">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="30" fill="currentColor"/>
+            <path d="M60 75 A55 15 0 1 0 60 45" fill="none" stroke="currentColor" stroke-width="8" transform="rotate(-15,60,60)"/>
+            <path d="M60 75 A55 15 0 0 1 60 45" fill="none" stroke="currentColor" stroke-opacity=".45" stroke-width="8" transform="rotate(-15,60,60)"/>
+            <path d="M60 60 L30 60 A30 30 0 0 1 90 60 Z" fill="currentColor"/>
+        </svg>
+        Saturn9
+    </a>
+    <nav aria-label="Main navigation">
+        <a href="/#products"{% if page.nav == "products" %} aria-current="page"{% endif %}>Products</a>
+        <a href="https://saturn9.press/">Press</a>
+        <a href="/technology/"{% if page.nav == "technology" %} aria-current="page"{% endif %}>Technology</a>
+        <a href="/#about">About</a>
+    </nav>
+    {% include theme-toggle.html %}
+</header>

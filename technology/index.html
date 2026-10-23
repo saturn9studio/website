@@ -1,46 +1,26 @@
 ---
+layout: default
+title: Technology
+nav: technology
+description: Markoffset, Scribeframe and Flow CLI, the open-source parser, editor engine and terminal app behind Saturn9 writing tools.
 ---
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Technology</title>
-    <link rel="icon" type="image/x-icon" href="../static/img/s9.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
-
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-</head>
-
-<body>
-    {% include navbar.html %}
-
-    <section class="banner technology-banner">
-        <div class="banner-title">
-            <div class="banner-logo technology-logo">{ }</div>
-            <h1>Technology</h1>
+<section class="page-hero container">
+    <div class="row">
+        <div>
+            <h1>Open-source foundations for writing tools.</h1>
+            <p class="lede">Saturn9 writing apps are built on small, focused packages that keep editing fast, predictable, and format-aware. Built for authors, shared with builders.</p>
         </div>
-        <p>Open-source foundations for writing tools.</p>
-    </section>
+    </div>
+</section>
 
-    <section class="technology-intro" data-aos="fade-up">
-        <h2>Built for authors, shared with builders.</h2>
-        <p>Saturn9 writing apps are built on small, focused packages that keep editing fast, predictable, and format-aware.</p>
-    </section>
-
-    <section class="feature-section technology-feature" data-aos="fade-right">
-        <div class="feature-text">
-            <div class="technology-card-label">Markdown parser</div>
-            <h2>Markoffset</h2>
+<section class="section container" id="markoffset" aria-labelledby="markoffset-title">
+    <p class="section-title">Markdown parser</p>
+    <div class="row">
+        <div class="prose">
+            <h2 id="markoffset-title">Markoffset</h2>
             <p>A fast, plugin-based Markdown parser that keeps source offsets attached to every token for editor and analysis workflows.</p>
             <p>CommonMark and GitHub Flavored Markdown presets are built from composable block, inline, delimiter, and extension rules.</p>
-            <div class="technology-actions">
-                <a href="https://github.com/saturn9studio/markoffset" target="_blank">GitHub</a>
-                <a href="https://www.npmjs.com/package/@saturn9/markoffset" target="_blank">npm</a>
-            </div>
-        </div>
-        <div class="feature-image technology-card-visual">
-            <pre class="technology-code"><code><span class="code-keyword">import</span> {
+            <pre class="code"><code><span class="code-keyword">import</span> {
     <span class="code-binding">gfmParser</span>,
     <span class="code-function">parseDocument</span>,
     <span class="code-function">reparse</span>,
@@ -56,22 +36,21 @@ state = <span class="code-function">reparse</span>(gfmParser, state, {
 
 console.<span class="code-function">log</span>(state.<span class="code-property">tokens</span>);</code></pre>
         </div>
-    </section>
+        <ul class="ruled-list" aria-label="Markoffset">
+            <li><a href="https://github.com/saturn9studio/markoffset"><span>GitHub</span><span aria-hidden="true">&nearr;</span></a></li>
+            <li><a href="https://www.npmjs.com/package/@saturn9/markoffset"><span>npm</span><span aria-hidden="true">&nearr;</span></a></li>
+        </ul>
+    </div>
+</section>
 
-    <section class="feature-section alt technology-feature" data-aos="fade-left">
-        <div class="feature-text">
-            <div class="technology-card-label">Editor engine</div>
-            <h2>Scribeframe</h2>
+<section class="section container" id="scribeframe" aria-labelledby="scribeframe-title">
+    <p class="section-title">Editor engine</p>
+    <div class="row">
+        <div class="prose">
+            <h2 id="scribeframe-title">Scribeframe</h2>
             <p>A format-agnostic text editor runtime with owned document state, input, rendering, history, plugins, and widget lifecycle.</p>
             <p>Scribeframe provides transaction-based editing, virtualized rendering, stable selection, and renderer-owned widgets.</p>
-            <div class="technology-actions">
-                <a href="https://github.com/saturn9studio/scribeframe" target="_blank">GitHub</a>
-                <a href="https://www.npmjs.com/package/@saturn9/scribeframe" target="_blank">npm</a>
-                <a href="https://saturn9studio.github.io/scribeframe/" target="_blank">Live demo</a>
-            </div>
-        </div>
-        <div class="feature-image technology-card-visual">
-            <pre class="technology-code"><code><span class="code-keyword">import</span> { <span class="code-binding">ScribeFrame</span> } <span class="code-keyword">from</span> <span class="code-string">"@saturn9/scribeframe"</span>;
+            <pre class="code"><code><span class="code-keyword">import</span> { <span class="code-binding">ScribeFrame</span> } <span class="code-keyword">from</span> <span class="code-string">"@saturn9/scribeframe"</span>;
 <span class="code-keyword">import</span> <span class="code-string">"@saturn9/scribeframe/styles.css"</span>;
 
 <span class="code-keyword">const</span> <span class="code-binding">host</span> = document.<span class="code-function">querySelector</span>&lt;HTMLElement&gt;(
@@ -87,36 +66,27 @@ console.<span class="code-function">log</span>(state.<span class="code-property"
   },
 });</code></pre>
         </div>
-    </section>
+        <ul class="ruled-list" aria-label="Scribeframe">
+            <li><a href="https://github.com/saturn9studio/scribeframe"><span>GitHub</span><span aria-hidden="true">&nearr;</span></a></li>
+            <li><a href="https://www.npmjs.com/package/@saturn9/scribeframe"><span>npm</span><span aria-hidden="true">&nearr;</span></a></li>
+            <li><a href="https://saturn9studio.github.io/scribeframe/"><span>Live demo</span><span aria-hidden="true">&nearr;</span></a></li>
+        </ul>
+    </div>
+</section>
 
-    <section class="feature-section technology-feature" data-aos="fade-right">
-        <div class="feature-text">
-            <div class="technology-card-label">Open-source app</div>
-            <h2>Flow CLI</h2>
-            <p>Flow CLI is the open-source terminal edition of Flow: a keyboard-first Markdown editor built on the same Saturn9 parser foundations.</p>
+<section class="section container" id="flow-cli" aria-labelledby="flow-cli-title">
+    <p class="section-title">Open-source app</p>
+    <div class="row">
+        <div class="prose">
+            <h2 id="flow-cli-title">Flow CLI</h2>
+            <p>Flow CLI is the open-source terminal edition of <a href="/flow/">Flow</a>: a keyboard-first Markdown editor built on the same Saturn9 parser foundations.</p>
             <p>It is a real terminal app, with its own input handling, grapheme-aware layout, widgets, selection, and incremental ANSI rendering.</p>
-            <div class="technology-actions">
-                <a href="https://github.com/saturn9studio/flow-cli" target="_blank">GitHub</a>
-                <a href="https://www.npmjs.com/package/@saturn9/flow-cli" target="_blank">npm</a>
-                <a href="https://github.com/saturn9studio/homebrew-flow-cli" target="_blank">Homebrew</a>
-            </div>
         </div>
-        <div class="feature-image technology-card-visual">
-            <img src="../static/img/screenshots/flow/flow-cli-demo.png" alt="Flow CLI editing a Markdown document in a terminal" />
-        </div>
-    </section>
-
-    {% include footer.html %}
-
-    <script src="../static/js/navigation.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1600,
-            easing: 'ease-in-out',
-            delay: 150,
-            once: false,
-        });
-    </script>
-</body>
-</html>
+        <ul class="ruled-list" aria-label="Flow CLI">
+            <li><a href="https://github.com/saturn9studio/flow-cli"><span>GitHub</span><span aria-hidden="true">&nearr;</span></a></li>
+            <li><a href="https://www.npmjs.com/package/@saturn9/flow-cli"><span>npm</span><span aria-hidden="true">&nearr;</span></a></li>
+            <li><a href="https://github.com/saturn9studio/homebrew-flow-cli"><span>Homebrew</span><span aria-hidden="true">&nearr;</span></a></li>
+        </ul>
+    </div>
+    <img class="shot" src="/static/img/screenshots/flow/flow-cli-demo.png" alt="Flow CLI editing a Markdown document in a terminal" loading="lazy">
+</section>

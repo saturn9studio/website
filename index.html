@@ -1,194 +1,77 @@
 ---
+layout: default
+description: Saturn9 makes tools for storytellers. Flow, Longhand, Saturn9 Press and CAM80.
 ---
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Saturn9</title>
-    <link rel="icon" type="image/x-icon" href="static/img/s9.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
-
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-</head>
-
-<body>
-    {% include navbar.html %}
-
-    <!-- Particles -->
-    <div class="particles" aria-hidden="true">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
+<section class="page-hero container">
+    <div class="row">
+        <div>
+            <h1>Tools for storytellers.</h1>
+            <p class="lede">Carefully crafted. Meant to inspire.</p>
+        </div>
+        <p class="note note-hero">Built from scratch: our own Markdown parser and text engine, open source. <a href="/technology/">Technology&nbsp;&rarr;</a></p>
     </div>
+</section>
 
-    <!-- Hero -->
-    <section class="hero">
-        <img src="static/img/s9.svg" alt="Saturn9 logo" class="hero-logo" />
-        <h1 class="hero-title">Saturn9</h1>
-        <p class="hero-subtitle">Story studio</p>
-        <div class="scroll-hint" id="scroll-hint">
-            <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2 2L12 12L22 2" stroke="rgba(255,255,255,0.5)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+<section class="section container" id="products" aria-labelledby="products-title">
+    <h2 class="section-title" id="products-title">Products</h2>
+    <div class="shelf">
+        <a class="cover-item" href="/flow/" aria-label="Flow">
+            <span class="cover cover-flow">
+                <span class="cover-no"><span>S9 &middot; 01</span><span>writing</span></span>
+                <span class="cover-art"><img src="/static/img/icons/flow.svg" alt="" width="256" height="256"></span>
+                <span class="cover-text">
+                    <span class="cover-title">Flow</span>
+                    <span class="cover-tagline">The best focused writing experience</span>
+                </span>
+            </span>
+            <span class="cover-caption">macOS, Windows, terminal</span>
+        </a>
+        <a class="cover-item" href="/longhand/" aria-label="Longhand">
+            <span class="cover cover-longhand">
+                <span class="cover-no"><span>S9 &middot; 02</span><span>writing</span></span>
+                <span class="cover-art"><img src="/static/img/icons/longhand.svg" alt="" width="256" height="256"></span>
+                <span class="cover-text">
+                    <span class="cover-title">Long&shy;hand</span>
+                    <span class="cover-tagline">Your book deserves a better tool</span>
+                </span>
+            </span>
+            <span class="cover-caption">macOS</span>
+        </a>
+        <a class="cover-item" href="https://saturn9.press/" aria-label="Saturn9 Press">
+            <span class="cover cover-press">
+                <span class="cover-no"><span>S9 &middot; 03</span><span>books</span></span>
+                <span class="cover-art"><img src="/static/img/icons/press.svg" alt="" width="256" height="256"></span>
+                <span class="cover-text">
+                    <span class="cover-title">Press</span>
+                    <span class="cover-tagline">Our independent imprint</span>
+                </span>
+            </span>
+            <span class="cover-caption">saturn9.press <span aria-hidden="true">&nearr;</span></span>
+        </a>
+        <div class="cover-item">
+            <span class="cover cover-cam80">
+                <span class="cover-no"><span>S9 &middot; 04</span><span>pictures</span></span>
+                <span class="cover-art"><img src="/static/img/icons/cam80.png" alt="" width="256" height="256"></span>
+                <span class="cover-text">
+                    <span class="cover-title">CAM80</span>
+                    <span class="cover-tagline">A camera app</span>
+                </span>
+            </span>
+            <span class="cover-caption">In development</span>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Products -->
-    <section class="product-section" data-aos="fade-up">
-        <a href="/longhand/" class="product-link">
-            <div class="product-text">
-                <div class="product-header">
-                    <img src="static/img/longhand.svg" alt="Longhand logo" class="product-logo" />
-                    <h2>Longhand</h2>
-                </div>
-                <p>Your book deserves a better tool.</p>
-                <p>A beautifully crafted writing experience designed for long-form writing. Organize your manuscript, keep notes alongside your work, and export when you're ready.</p>
-                <span class="product-cta">Learn more &rarr;</span>
-            </div>
-            <div class="product-image">
-                <img src="static/img/screenshots/longhand/themes.png" alt="Longhand screenshot" />
-            </div>
-        </a>
-    </section>
-
-    <section class="product-section alt" data-aos="fade-up" data-aos-delay="150">
-        <a href="/flow/" class="product-link">
-            <div class="product-text">
-                <div class="product-header">
-                    <img src="static/img/flow.svg" alt="Flow logo" class="product-logo" />
-                    <h2>Flow</h2>
-                </div>
-                <p>The best focused writing experience.</p>
-                <p>A modern, carefully designed app meant to inspire at every step. Write in Markdown on desktop or in your terminal, stay in the zone with focus mode, and make it yours with beautiful themes.</p>
-                <span class="product-cta">Learn more &rarr;</span>
-            </div>
-            <div class="product-image">
-                <img src="static/img/screenshots/flow/blank.png" alt="Flow screenshot" />
-            </div>
-        </a>
-    </section>
-
-    <section class="product-section" data-aos="fade-up" data-aos-delay="300">
-        <a href="/technology/" class="product-link">
-            <div class="product-text">
-                <div class="product-header">
-                    <div class="product-logo product-logo-code">{ }</div>
-                    <h2>Technology</h2>
-                </div>
-                <p>Open-source foundations for better writing tools.</p>
-                <p>Markoffset and Scribeframe are the Markdown parser and editor engine powering the next generation of Saturn9 writing apps.</p>
-                <span class="product-cta">Explore the stack &rarr;</span>
-            </div>
-            <div class="product-image technology-preview">
-                <pre class="technology-code"><code><span class="code-keyword">import</span> { <span class="code-binding">gfmParser</span>, <span class="code-function">parseDocument</span> } <span class="code-keyword">from</span> <span class="code-string">"@saturn9/markoffset"</span>;
-<span class="code-keyword">import</span> { <span class="code-binding">ScribeFrame</span> } <span class="code-keyword">from</span> <span class="code-string">"@saturn9/scribeframe"</span>;
-
-<span class="code-keyword">const</span> <span class="code-binding">markdown</span> = <span class="code-string">"# Hello, Saturn9"</span>;
-<span class="code-keyword">let</span> <span class="code-binding">parsed</span> = <span class="code-function">parseDocument</span>(gfmParser, markdown);
-
-<span class="code-keyword">const</span> <span class="code-binding">host</span> = document.<span class="code-function">getElementById</span>(<span class="code-string">"editor"</span>);
-<span class="code-keyword">if</span> (!host) <span class="code-keyword">throw new</span> <span class="code-function">Error</span>(<span class="code-string">"Editor host not found"</span>);
-
-<span class="code-keyword">const</span> <span class="code-binding">editor</span> = <span class="code-keyword">new</span> <span class="code-function">ScribeFrame</span>(host, {
-  <span class="code-property">content</span>: markdown,
-  <span class="code-property">onChange</span>: () =&gt; {
-    parsed = <span class="code-function">parseDocument</span>(gfmParser, editor.<span class="code-function">getContent</span>());
-    console.<span class="code-function">log</span>(parsed.<span class="code-property">tokens</span>);
-  },
-});</code></pre>
-            </div>
-        </a>
-    </section>
-
-    <section class="product-section alt" data-aos="fade-up" data-aos-delay="450">
-        <a href="https://saturn9.press/" target="_blank" class="product-link">
-            <div class="product-text">
-                <div class="product-header">
-                    <img src="static/img/press.svg" alt="Saturn9 Press logo" class="product-logo" />
-                    <h2>Saturn9 Press</h2>
-                </div>
-                <p>Independent publishing imprint.</p>
-                <p>Saturn9 Press is how we bring stories from screen to page.</p>
-                <span class="product-cta">Visit saturn9.press &rarr;</span>
-            </div>
-            <div class="product-image">
-                <img src="static/img/sector-36-cover.jpg" alt="Sector 36 book cover" />
-            </div>
-        </a>
-    </section>
-
-    <!-- About -->
-    <section class="about-section" data-aos="fade-up">
-        <h2 class="about-heading">About Saturn9</h2>
-        <p>Saturn9 is an indie studio built around one idea: writing tools should inspire, not get in the way. Every app we make is crafted with care, designed to feel as good as the stories you create with it.</p>
-    </section>
-
-    <!-- Community -->
-    <section class="community-section" data-aos="fade-up">
-        <h2 class="community-heading">Join the community</h2>
-        <p>Follow along, share feedback, or just say hello.</p>
-        <div class="community-links">
-            <a href="https://discord.gg/2vmaRr5JRD" target="_blank" class="community-link">
-                <img src="static/img/discord.svg" alt="Discord" />
-                <span>Discord</span>
-            </a>
-            <a href="https://x.com/saturn9studio" target="_blank" class="community-link">
-                <img src="static/img/x.svg" alt="X" />
-                <span>X</span>
-            </a>
+<section class="section container" id="about" aria-labelledby="about-title">
+    <h2 class="section-title" id="about-title">About</h2>
+    <div class="row">
+        <div class="prose">
+            <p>Saturn9 is an indie studio built around one idea: writing tools should inspire, not get in the way. Every app we make is crafted with care, designed to feel as good as the stories you create with it.</p>
+            <p>Follow along, share feedback, or just say hello.</p>
         </div>
-    </section>
-
-    {% include footer.html %}
-
-    <script src="static/js/navigation.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1200,
-            easing: 'ease-in-out',
-            delay: 100,
-            once: false,
-        });
-
-        const scrollHint = document.getElementById('scroll-hint');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                scrollHint.classList.add('hidden');
-            } else {
-                scrollHint.classList.remove('hidden');
-            }
-        });
-    </script>
-</body>
-</html>
+        <ul class="ruled-list" aria-label="Community">
+            <li><a href="https://discord.gg/2vmaRr5JRD"><span>Discord</span><span aria-hidden="true">&nearr;</span></a></li>
+            <li><a href="https://x.com/saturn9studio"><span>X</span><span aria-hidden="true">&nearr;</span></a></li>
+        </ul>
+    </div>
+</section>

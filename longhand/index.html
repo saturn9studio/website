@@ -1,92 +1,69 @@
 ---
+layout: default
+title: Longhand
+nav: products
+description: Longhand is a writing app for long-form work on macOS.
 ---
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Longhand</title>
-    <link rel="icon" type="image/x-icon" href="../static/img/s9.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+{% include product-nav.html name="Longhand" slug="longhand" current="overview" %}
 
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-</head>
+<section class="product-hero container">
+    <img class="app-icon product-icon" src="/static/img/icons/longhand.svg" alt="Longhand app icon" width="160" height="160">
+    <div class="product-intro">
+        <h1>Your book deserves a better tool.</h1>
+        <p class="lede">A beautifully crafted writing experience designed for long-form writing. Organize your manuscript, keep notes alongside your work, and export when you're ready.</p>
+        <ul class="ruled-list" aria-label="Get Longhand">
+            <li><a href="https://apps.apple.com/us/app/longhand-by-saturn9/id6761262924"><span>Get Longhand for macOS</span><span aria-hidden="true">&nearr;</span></a></li>
+        </ul>
+    </div>
+</section>
 
-<body>
-    {% include navbar-longhand.html %}
-
-    <!-- Banner -->
-    <section class="banner">
-        <div class="banner-title">
-            <img src="../static/img/longhand.svg" alt="Longhand logo" class="banner-logo" />
-            <h1>Longhand</h1>
-        </div>
-        <p>Your book deserves a better tool.</p>
-        <div class="download-buttons">
-            <a href="https://apps.apple.com/us/app/longhand-by-saturn9/id6761262924" class="download-button">Get Longhand for macOS</a>
-        </div>
-    </section>
-
-    <!-- Feature Sections -->
-    <section class="feature-section" data-aos="fade-right">
-        <div class="feature-text">
+<section class="section container">
+    <div class="row">
+        <div class="prose">
             <h2>Distraction-free writing</h2>
             <p>Focus mode provides an immersive, full screen writing experience. Everything fades away so you can concentrate on the next word, then the one after.</p>
         </div>
-        <div class="feature-image">
-            <img src="../static/img/screenshots/longhand/focused.png" />
-        </div>
-    </section>
+    </div>
+    <img class="shot" src="/static/img/screenshots/longhand/focused.png" alt="Longhand in focus mode" loading="lazy">
+</section>
 
-    <section class="feature-section alt" data-aos="fade-left">
-        <div class="feature-text">
+<section class="section container">
+    <div class="row">
+        <div class="prose">
             <h2>Notes &amp; research</h2>
             <p>Keep your notes, references, and ideas right alongside your manuscript. Everything in one place, nothing lost.</p>
         </div>
-        <div class="feature-image">
-            <img src="../static/img/screenshots/longhand/notes.png" />
-        </div>
-    </section>
+    </div>
+    <img class="shot" src="/static/img/screenshots/longhand/notes.png" alt="A character note in Longhand, next to the manuscript and notes navigator" loading="lazy">
+</section>
 
-    <section class="feature-section" data-aos="fade-right">
-        <div class="feature-text">
+<section class="section container">
+    <div class="row">
+        <div class="prose">
             <h2>Themes</h2>
             <p>Longhand was designed to inspire. Explore multiple themes and pick the one that speaks to you.</p>
         </div>
-        <div class="feature-image">
-            <img src="../static/img/screenshots/longhand/themes.png" />
-        </div>
-    </section>
+    </div>
+    <img class="shot" src="/static/img/screenshots/longhand/themes.png" alt="Longhand theme choices" loading="lazy">
+</section>
 
-    <section class="feature-section alt" data-aos="fade-left">
-        <div class="feature-text">
+<section class="section container">
+    <div class="row">
+        <div class="prose">
             <h2>Export &amp; publish</h2>
             <p>When you're ready, export to Word and PDF. From first draft to final manuscript, all in one app.</p>
         </div>
-        <div class="feature-image">
-            <img src="../static/img/screenshots/longhand/export.png" />
+    </div>
+    <img class="shot" src="/static/img/screenshots/longhand/export.png" alt="The Export tool beside the manuscript in Reading mode" loading="lazy">
+</section>
+
+<section class="section container">
+    <div class="row">
+        <div>
+            <h2 class="closing">Your next book starts here.</h2>
         </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="banner bottom">
-        <h2>Your next book starts here.</h2>
-        <div class="download-buttons">
-            <a href="https://apps.apple.com/us/app/longhand-by-saturn9/id6761262924" class="download-button">Get Longhand for macOS</a>
-        </div>
-    </section>
-
-    {% include footer.html %}
-
-    <script src="../static/js/navigation.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 2000,
-            easing: 'ease-in-out',
-            delay: 200,
-            once: false,
-        });
-    </script>
-</body>
-</html>
+        <ul class="ruled-list" aria-label="Get Longhand">
+            <li><a href="https://apps.apple.com/us/app/longhand-by-saturn9/id6761262924"><span>Get Longhand for macOS</span><span aria-hidden="true">&nearr;</span></a></li>
+        </ul>
+    </div>
+</section>

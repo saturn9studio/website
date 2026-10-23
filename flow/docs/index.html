@@ -1,64 +1,26 @@
 ---
+layout: default
+title: Flow docs
+nav: products
+description: How to use Flow.
+scripts: [/static/js/docs-navigation.js]
 ---
+{% include product-nav.html name="Flow" slug="flow" current="docs" %}
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Flow Documentation</title>
-        <link rel="icon" type="image/x-icon" href="../../static/img/s9.svg" />
+<div class="docs container">
+    <nav class="docs-contents" aria-label="Contents">
+        <p class="label">Contents</p>
+        <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#editor-modes">Editor Modes</a></li>
+            <li><a href="#markdown">Markdown</a></li>
+            <li><a href="#export">Export</a></li>
+            <li><a href="#clipboard">Clipboard</a></li>
+        </ul>
+    </nav>
+    <article class="docs-body prose">
+        <h1>Flow documentation</h1>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <!-- Custom style -->
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="../../static/css/style.css"
-        />
-    </head>
-    <body>
-        {% include navbar-flow.html %}
-
-        <!-- Mobile Overlay -->
-        <div class="docs-overlay" id="docsOverlay"></div>
-
-        <!-- Mobile Navigation Toggle -->
-        <button class="docs-nav-toggle" id="docsNavToggle">
-            <span class="arrow-icon">→</span>
-        </button>
-
-        <div class="docs-container">
-            <!-- Sidebar Navigation -->
-            <aside class="docs-sidebar" id="docsSidebar">
-                <div class="sidebar-header">
-                    <h3>Documentation</h3>
-                </div>
-                <nav class="sidebar-nav">
-                    <ul>
-                        <li>
-                            <a href="#features" class="nav-link">Features</a>
-                        </li>
-                        <li>
-                            <a href="#editor-modes" class="nav-link"
-                                >Editor Modes</a
-                            >
-                        </li>
-                        <li>
-                            <a href="#markdown" class="nav-link">Markdown</a>
-                        </li>
-                        <li>
-                            <a href="#export" class="nav-link">Export</a>
-                        <li>
-                            <a href="#clipboard" class="nav-link">Clipboard</a>
-                        </li>
-                    </ul>
-                </nav>
-            </aside>
-
-            <!-- Main Content -->
-            <main class="docs-content">
-                <div class="docs-text">
                     <h2 id="features">Features</h2>
                     <p>
                         Flow aims to provide a smooth, beautiful writing
@@ -95,11 +57,8 @@
                     </p>
                     <hr />
                     <h2 id="editor-modes">Editor modes</h2>
-                    <h3 class="editor-mode">
-                        <img
-                            src="../../static/img/focus-mode.svg"
-                            alt="Focus mode"
-                        /><span>Focus Mode</span>
+                    <h3>
+                        <span>Focus Mode</span>
                     </h3>
                     <p>
                         Focus mode provides the ultimate distraction-free
@@ -109,11 +68,8 @@
                         Spellchecking is disabled. Press <code>ESC</code> or
                         click outside the editor to exit focus mode.
                     </p>
-                    <h3 class="editor-mode">
-                        <img
-                            src="../../static/img/edit-mode.svg"
-                            alt="Edit mode"
-                        /><span>Edit Mode</span>
+                    <h3>
+                        <span>Edit Mode</span>
                     </h3>
                     <p>
                         Edit mode allows you to iterate on your text. Markdown
@@ -122,11 +78,8 @@
                         spellchecking are enabled. This mode also displays word
                         count in the bottom right corner.
                     </p>
-                    <h3 class="editor-mode">
-                        <img
-                            src="../../static/img/read-mode.svg"
-                            alt="Read mode"
-                        /><span>Read Mode</span>
+                    <h3>
+                        <span>Read Mode</span>
                     </h3>
                     <p>
                         Read mode is optimized for reading. All markup is hidden
@@ -134,11 +87,8 @@
                         closely resemble a print book. Spellchecking is
                         disabled.
                     </p>
-                    <h3 class="editor-mode">
-                        <img
-                            src="../../static/img/source-mode.svg"
-                            alt="Source mode"
-                        /><span>Source Mode</span>
+                    <h3>
+                        <span>Source Mode</span>
                     </h3>
                     <p>
                         Source mode shows the full Markdown. Unlike the other
@@ -171,13 +121,13 @@
                             <tr>
                                 <td data-label="Markup syntax"># Heading 1</td>
                                 <td data-label="How it looks like">
-                                    <h1 style="text-shadow: none">Heading 1</h1>
+                                    <h1>Heading 1</h1>
                                 </td>
                             </tr>
                             <tr>
                                 <td data-label="Markup syntax">## Heading 2</td>
                                 <td data-label="How it looks like">
-                                    <h2 style="text-shadow: none">Heading 2</h2>
+                                    <h2>Heading 2</h2>
                                 </td>
                             </tr>
                             <tr>
@@ -243,7 +193,7 @@
                                     ==Highlight==
                                 </td>
                                 <td data-label="How it looks like">
-                                    <mark>Highlight</mark>
+                                    <mark style="background-color: rgba(250, 204, 21, 0.35)">Highlight</mark>
                                 </td>
                             </tr>
                             <tr>
@@ -338,13 +288,7 @@
                                     ```
                                 </td>
                                 <td data-label="How it looks like">
-                                    <pre
-                                        style="
-                                            white-space: pre-wrap;
-                                            background-color: #1a1b26;
-                                            font-size: 0.9em;
-                                        "
-                                    >
+                                    <pre>
                                     Code block
                                     </pre>
                                 </td>
@@ -362,13 +306,13 @@
                                         style="
                                             display: grid;
                                             grid-template-columns: 1fr 1fr;
-                                            border: 1px solid #565f89;
+                                            border: 1px solid var(--s9-rule);
                                         "
                                     >
                                         <span
                                             style="
-                                                border-right: 1px solid #565f89;
-                                                border-bottom: 1px solid #565f89;
+                                                border-right: 1px solid var(--s9-rule);
+                                                border-bottom: 1px solid var(--s9-rule);
                                                 padding: 5px;
                                                 font-weight: bold;
                                             "
@@ -376,7 +320,7 @@
                                         >
                                         <span
                                             style="
-                                                border-bottom: 1px solid #565f89;
+                                                border-bottom: 1px solid var(--s9-rule);
                                                 padding: 5px;
                                                 font-weight: bold;
                                             "
@@ -384,7 +328,7 @@
                                         >
                                         <span
                                             style="
-                                                border-right: 1px solid #565f89;
+                                                border-right: 1px solid var(--s9-rule);
                                                 padding: 5px;
                                             "
                                             >1</span
@@ -456,13 +400,7 @@
                         <code>$x^2 + 1$</code>. Use standalone
                         <code>$$</code> lines for display math:
                     </p>
-                    <pre
-                        style="
-                            white-space: pre-wrap;
-                            background-color: #1a1b26;
-                            font-size: 0.9em;
-                        "
-                    >$$
+                    <pre>$$
 \frac{a}{b}
 $$</pre>
                     <p>
@@ -518,13 +456,5 @@ $$</pre>
                         convert this to Markdown and try to match the formatting
                         of the clipboard content.
                     </p>
-                </div>
-            </main>
-        </div>
-
-        {% include footer.html %}
-
-        <script src="../../static/js/navigation.js"></script>
-        <script src="../../static/js/docs-navigation.js"></script>
-    </body>
-</html>
+    </article>
+</div>

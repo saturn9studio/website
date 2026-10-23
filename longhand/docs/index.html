@@ -1,68 +1,27 @@
 ---
+layout: default
+title: Longhand docs
+nav: products
+description: How to use Longhand.
+scripts: [/static/js/docs-navigation.js]
 ---
+{% include product-nav.html name="Longhand" slug="longhand" current="docs" %}
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Longhand Documentation</title>
-        <link rel="icon" type="image/x-icon" href="../../static/img/s9.svg" />
+<div class="docs container">
+    <nav class="docs-contents" aria-label="Contents">
+        <p class="label">Contents</p>
+        <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#editor-modes">Editor Modes</a></li>
+            <li><a href="#markdown">Markdown</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#clipboard">Clipboard</a></li>
+        </ul>
+    </nav>
+    <article class="docs-body prose">
+        <h1>Longhand documentation</h1>
 
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <!-- Custom style -->
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="../../static/css/style.css"
-        />
-    </head>
-    <body>
-        {% include navbar-longhand.html %}
-
-        <!-- Mobile Overlay -->
-        <div class="docs-overlay" id="docsOverlay"></div>
-
-        <!-- Mobile Navigation Toggle -->
-        <button class="docs-nav-toggle" id="docsNavToggle">
-            <span class="arrow-icon">→</span>
-        </button>
-
-        <div class="docs-container">
-            <!-- Sidebar Navigation -->
-            <aside class="docs-sidebar" id="docsSidebar">
-                <div class="sidebar-header">
-                    <h3>Documentation</h3>
-                </div>
-                <nav class="sidebar-nav">
-                    <ul>
-                        <li>
-                            <a href="#features" class="nav-link">Features</a>
-                        </li>
-                        <li>
-                            <a href="#projects" class="nav-link">Projects</a>
-                        </li>
-                        <li>
-                            <a href="#editor-modes" class="nav-link"
-                                >Editor Modes</a
-                            >
-                        </li>
-                        <li>
-                            <a href="#markdown" class="nav-link">Markdown</a>
-                        </li>
-                        <li>
-                            <a href="#tools" class="nav-link">Tools</a>
-                        </li>
-                        <li>
-                            <a href="#clipboard" class="nav-link">Clipboard</a>
-                        </li>
-                    </ul>
-                </nav>
-            </aside>
-
-            <!-- Main Content -->
-            <main class="docs-content">
-                <div class="docs-text">
                     <h2 id="features">Features</h2>
                     <p>
                         Longhand is a text editor built for professional authors
@@ -151,7 +110,7 @@
                     </p>
                     <hr />
                     <h2 id="editor-modes">Editor modes</h2>
-                    <h3 class="editor-mode">
+                    <h3>
                         <span>Editing Mode</span>
                     </h3>
                     <p>
@@ -167,7 +126,7 @@
                         Switch to editing mode with
                         <code>Cmd+1</code>.
                     </p>
-                    <h3 class="editor-mode">
+                    <h3>
                         <span>Reading Mode</span>
                     </h3>
                     <p>
@@ -183,7 +142,7 @@
                         Switch to reading mode with
                         <code>Cmd+2</code>.
                     </p>
-                    <h3 class="editor-mode">
+                    <h3>
                         <span>Focused Mode</span>
                     </h3>
                     <p>
@@ -220,13 +179,13 @@
                             <tr>
                                 <td data-label="Markup syntax"># Heading 1</td>
                                 <td data-label="How it looks like">
-                                    <h1 style="text-shadow: none">Heading 1</h1>
+                                    <h1>Heading 1</h1>
                                 </td>
                             </tr>
                             <tr>
                                 <td data-label="Markup syntax">## Heading 2</td>
                                 <td data-label="How it looks like">
-                                    <h2 style="text-shadow: none">Heading 2</h2>
+                                    <h2>Heading 2</h2>
                                 </td>
                             </tr>
                             <tr>
@@ -512,13 +471,5 @@
                         clipboard, Longhand will convert this to Markdown and
                         try to match the formatting of the clipboard content.
                     </p>
-                </div>
-            </main>
-        </div>
-
-        {% include footer.html %}
-
-        <script src="../../static/js/navigation.js"></script>
-        <script src="../../static/js/docs-navigation.js"></script>
-    </body>
-</html>
+    </article>
+</div>

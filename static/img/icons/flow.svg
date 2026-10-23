@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384">
+  <!-- Background -->
+  <rect x="0" y="0" width="384" height="384" fill="#0055CC"/>
+
+  <!-- Text snippet suggestion (left) -->
+  <rect x="92" y="107" width="90" height="20" fill="#94A3B8" opacity="0.3"/>
+  <rect x="92" y="157" width="90" height="20" fill="#94A3B8" opacity="0.3"/>
+  <rect x="92" y="207" width="90" height="20" fill="#94A3B8" opacity="0.8"/>
+  <rect x="92" y="257" width="90" height="20" fill="#94A3B8" opacity="0.3"/>
+
+  <!-- Text snippet suggestion (right) -->
+  <rect x="202" y="107" width="90" height="20" fill="#94A3B8" opacity="0.3"/>
+  <rect x="202" y="157" width="90" height="20" fill="#94A3B8" opacity="0.8"/>
+  <rect x="202" y="207" width="90" height="20" fill="#94A3B8" opacity="0.3"/>
+  <rect x="202" y="257" width="90" height="20" fill="#94A3B8" opacity="0.3"/>
+
+  <!-- Main cursor -->
+  <rect x="182" y="92" width="20" height="200" fill="#F8FAFC"/>
+</svg>

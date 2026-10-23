@@ -1,0 +1,5 @@
+<nav class="product-nav container" aria-label="{{ include.name }}">
+    <a href="/{{ include.slug }}/"{% if include.current == "overview" %} aria-current="page"{% endif %}>{{ include.name }}</a>
+    <a href="/{{ include.slug }}/docs/"{% if include.current == "docs" %} aria-current="page"{% endif %}>Docs</a>
+    <a href="/{{ include.slug }}/privacy/"{% if include.current == "privacy" %} aria-current="page"{% endif %}>Privacy</a>
+</nav>

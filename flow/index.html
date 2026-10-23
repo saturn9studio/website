@@ -1,111 +1,89 @@
 ---
+layout: default
+title: Flow
+nav: products
+description: Flow is a focused Markdown writing app for macOS, Windows and the terminal.
 ---
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Flow</title>
-    <link rel="icon" type="image/x-icon" href="../static/img/s9.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+{% include product-nav.html name="Flow" slug="flow" current="overview" %}
 
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-</head>
+<section class="product-hero container">
+    <img class="app-icon product-icon" src="/static/img/icons/flow.svg" alt="Flow app icon" width="160" height="160">
+    <div class="product-intro">
+        <h1>The best focused writing experience.</h1>
+        <p class="lede">A modern, carefully designed app meant to inspire at every step. Write in Markdown on desktop or in your terminal.</p>
+        <ul class="ruled-list" aria-label="Get Flow">
+            <li><a href="https://apps.apple.com/us/app/flow-by-saturn9/id6744873955"><span>Get Flow for macOS</span><span aria-hidden="true">&nearr;</span></a></li>
+            <li><a href="https://apps.microsoft.com/detail/9p6xv04twcx5"><span>Get Flow for Windows</span><span aria-hidden="true">&nearr;</span></a></li>
+            <li><a href="https://github.com/saturn9studio/flow-cli"><span>Get Flow for Terminal</span><span aria-hidden="true">&nearr;</span></a></li>
+        </ul>
+    </div>
+</section>
 
-<body>
-    {% include navbar-flow.html %}
-
-    <!-- Banner Image -->
-    <section class="banner">
-        <div class="banner-title">
-            <img src="../static/img/flow.svg" alt="Flow logo" class="banner-logo" />
-            <h1>Flow</h1>
-        </div>
-        <p>The best focused writing experience.</p>
-        <div class="download-buttons">
-            <a href="https://apps.apple.com/us/app/flow-by-saturn9/id6744873955" class="download-button">Get Flow for macOS</a>
-            <a href="https://apps.microsoft.com/detail/9p6xv04twcx5" class="download-button microsoft">Get Flow for Windows</a>
-            <a href="https://github.com/saturn9studio/flow-cli" class="download-button terminal" target="_blank">Get Flow for Terminal</a>
-        </div>
-    </section>
-
-    <!-- Feature Sections -->
-    <section class="feature-section" data-aos="fade-right">
-        <div class="feature-text">
+<section class="section container">
+    <div class="row">
+        <div class="prose">
             <h2>It's all about inspiration</h2>
             <p>Flow was built from the ground up as a modern, carefully designed experience, meant to inspire at every step.</p>
         </div>
-        <div class="feature-image">
-            <img src="../static/img/screenshots/flow/blank.png" />
-        </div>
-    </section>
+    </div>
+    <img class="shot" src="/static/img/screenshots/flow/blank.png" alt="Flow with a blank document" loading="lazy">
+</section>
 
-    <section class="feature-section alt" data-aos="fade-left">
-        <div class="feature-text">
+<section class="section container">
+    <div class="row">
+        <div class="prose">
             <h2>Distraction-free writing</h2>
             <p>Focus mode provides an immersive, full screen writing experience. Everything except the current sentence is muted, so you can focus on what comes next.</p>
         </div>
-        <div class="feature-image">
-            <img src="../static/img/screenshots/flow/focus.png" />
-        </div>
-    </section>
+    </div>
+    <img class="shot" src="/static/img/screenshots/flow/focus.png" alt="Flow in focus mode, with everything but the current sentence muted" loading="lazy">
+</section>
 
-    <section class="feature-section" data-aos="fade-right">
-        <div class="feature-text">
+<section class="section container">
+    <div class="row">
+        <div class="prose">
             <h2>Themes</h2>
             <p>Flow was designed to inspire. Explore multiple themes and pick the one that speaks to you.</p>
         </div>
-        <div class="feature-image">
-            <img src="../static/img/screenshots/flow/themes.png" />
-        </div>
-    </section>
+    </div>
+    <img class="shot" src="/static/img/screenshots/flow/themes.png" alt="Flow theme choices" loading="lazy">
+</section>
 
-    <section class="feature-section alt" data-aos="fade-left">
-        <div class="feature-text">
+<section class="section container">
+    <div class="row">
+        <div class="prose">
             <h2>Markdown formatting</h2>
             <p>Markdown allows you to quickly style your text, using the keyboard, without breaking stride. The markup disappears when not under cursor to remove distractions.</p>
         </div>
-        <div class="feature-image">
-            <img src="../static/img/screenshots/flow/markdown.png" />
-        </div>
-    </section>
+        <p class="note">Every supported style is listed in the <a href="/flow/docs/#markdown">Markdown reference</a>.</p>
+    </div>
+    <img class="shot" src="/static/img/screenshots/flow/markdown.png" alt="Markdown formatting in Flow" loading="lazy">
+</section>
 
-    <section class="feature-section" data-aos="fade-right">
-        <div class="feature-text">
+<section class="section container">
+    <div class="row">
+        <div class="prose">
             <h2>Flow in your terminal</h2>
             <p>Flow CLI brings the same writing-first Markdown experience to the command line. Write in your terminal.</p>
-            <div class="technology-actions">
-                <a href="https://github.com/saturn9studio/flow-cli" target="_blank">GitHub</a>
-                <a href="https://www.npmjs.com/package/@saturn9/flow-cli" target="_blank">npm</a>
-                <a href="https://github.com/saturn9studio/homebrew-flow-cli" target="_blank">Homebrew</a>
-            </div>
         </div>
-        <div class="feature-image">
-            <img src="../static/img/screenshots/flow/flow-cli-demo.png" alt="Flow CLI editing a Markdown document in a terminal" />
+        <ul class="ruled-list" aria-label="Flow CLI">
+            <li><a href="https://github.com/saturn9studio/flow-cli"><span>GitHub</span><span aria-hidden="true">&nearr;</span></a></li>
+            <li><a href="https://www.npmjs.com/package/@saturn9/flow-cli"><span>npm</span><span aria-hidden="true">&nearr;</span></a></li>
+            <li><a href="https://github.com/saturn9studio/homebrew-flow-cli"><span>Homebrew</span><span aria-hidden="true">&nearr;</span></a></li>
+        </ul>
+    </div>
+    <img class="shot" src="/static/img/screenshots/flow/flow-cli-demo.png" alt="Flow CLI editing a Markdown document in a terminal" loading="lazy">
+</section>
+
+<section class="section container">
+    <div class="row">
+        <div>
+            <h2 class="closing">What is your story?</h2>
         </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="banner bottom">
-        <h2>What is your story?</h2>
-        <div class="download-buttons">
-            <a href="https://apps.apple.com/us/app/flow-by-saturn9/id6744873955" class="download-button">Get Flow for macOS</a>
-            <a href="https://apps.microsoft.com/detail/9p6xv04twcx5" class="download-button microsoft">Get Flow for Windows</a>
-            <a href="https://github.com/saturn9studio/flow-cli" class="download-button terminal" target="_blank">Get Flow for Terminal</a>
-        </div>
-    </section>
-
-    {% include footer.html %}
-
-    <script src="../static/js/navigation.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 2000,
-            easing: 'ease-in-out',
-            delay: 200,
-            once: false,
-        });
-    </script>
-</body>
-</html>
+        <ul class="ruled-list" aria-label="Get Flow">
+            <li><a href="https://apps.apple.com/us/app/flow-by-saturn9/id6744873955"><span>macOS</span><span aria-hidden="true">&nearr;</span></a></li>
+            <li><a href="https://apps.microsoft.com/detail/9p6xv04twcx5"><span>Windows</span><span aria-hidden="true">&nearr;</span></a></li>
+            <li><a href="https://github.com/saturn9studio/flow-cli"><span>Terminal</span><span aria-hidden="true">&nearr;</span></a></li>
+        </ul>
+    </div>
+</section>
