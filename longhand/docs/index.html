@@ -15,6 +15,7 @@ scripts: [/static/js/docs-navigation.js]
             <li><a href="#projects">Projects</a></li>
             <li><a href="#editor-modes">Editor Modes</a></li>
             <li><a href="#markdown">Markdown</a></li>
+            <li><a href="#review">Review</a></li>
             <li><a href="#tools">Tools</a></li>
             <li><a href="#clipboard">Clipboard</a></li>
         </ul>
@@ -39,11 +40,17 @@ scripts: [/static/js/docs-navigation.js]
                         fingertips.
                     </p>
                     <p>
-                        Three <a href="#editor-modes">editor modes</a> let you
-                        switch between writing, reading, and fully immersive
-                        focused writing. All changes are
+                        Four <a href="#editor-modes">editor modes</a> let you
+                        switch between writing, reviewing, reading, and fully
+                        immersive focused writing. All changes are
                         <b>automatically saved</b> as you type, so you never
                         have to worry about losing your work.
+                    </p>
+                    <p>
+                        <b>Review</b> your chapters with comments, suggested
+                        edits, and colored highlights, all stored in the chapter
+                        files themselves. Accept or reject suggestions one at a
+                        time or all at once. See <a href="#review">Review</a>.
                     </p>
                     <p>
                         <b>Auto-backup</b> preserves previous versions of your
@@ -58,7 +65,8 @@ scripts: [/static/js/docs-navigation.js]
                         and specialty options like Solarized, Nord, Dracula, and
                         Tokyo Night. Additional settings let you customize the
                         font, font size, line height, paragraph spacing,
-                        auto-indentation, and spell checking.
+                        auto-indentation, and spell checking. Six themes are
+                        included for everyone; the rest need the Pro plan.
                     </p>
                     <hr />
                     <h2 id="projects">Projects</h2>
@@ -75,14 +83,24 @@ scripts: [/static/js/docs-navigation.js]
                         new chapters from the navigator panel. New chapters
                         start with a default heading that you can edit — when
                         you change the heading, the file is automatically
-                        renamed to match.
+                        renamed to match. A new chapter is placed right after
+                        the selected one, at the same level, or at the end of
+                        the manuscript when nothing is selected.
                     </p>
                     <h3>Notes</h3>
                     <p>
                         Notes are for your research, character details, plot
                         outlines, worldbuilding, and any other reference
                         material. They are kept separate from the manuscript so
-                        they stay organized and out of the way.
+                        they stay organized and out of the way. New notes are
+                        placed after the selected note, like chapters.
+                    </p>
+                    <p>
+                        To keep a note in view while you write, right-click it and
+                        choose <code>Pin to References</code>. Pinned notes appear
+                        in the <a href="#notes-reference">Notes Reference</a> tool.
+                        Notes can be highlighted, but they don't hold comments or
+                        suggestions.
                     </p>
                     <h3>Organizing your project</h3>
                     <p>
@@ -100,16 +118,27 @@ scripts: [/static/js/docs-navigation.js]
                             icon.
                         </li>
                         <li>
-                            <b>Right-click</b> to rename or delete files.
+                            <b>Right-click</b> a file to rename, delete, or pin it,
+                            or right-click an empty area to add a chapter or note.
                         </li>
                     </ul>
                     <p>
                         Clicking a file in the navigator opens it in the editor.
                         Any pending changes to the previous file are
-                        automatically saved before switching.
+                        automatically saved before switching. Use
+                        <code>Cmd+[</code> and <code>Cmd+]</code>
+                        (<code>View &gt; Go Back</code> and
+                        <code>Go Forward</code>) to step through the files you've
+                        opened, and <code>File &gt; Open Recent</code> to reopen a
+                        recent project.
                     </p>
                     <hr />
                     <h2 id="editor-modes">Editor modes</h2>
+                    <p>
+                        Switch modes with the buttons at the top of the side rail
+                        on the left, the <code>View</code> menu, or the keyboard
+                        shortcuts below.
+                    </p>
                     <h3>
                         <span>Editing Mode</span>
                     </h3>
@@ -119,12 +148,39 @@ scripts: [/static/js/docs-navigation.js]
                         the tool panel on the right, and the status bar at the
                         bottom. Markdown annotations are revealed when the
                         cursor is on them, but otherwise stay hidden.
-                        Auto-indentation and spellchecking are enabled. The
-                        status bar shows the file path and word count.
+                        Spellchecking is enabled, and auto-indentation applies to
+                        manuscript chapters. The status bar shows the file path
+                        and word count. The count includes only the words a
+                        reader sees: Markdown markup, link addresses, comments,
+                        and suggested replacements are left out.
                     </p>
                     <p>
                         Switch to editing mode with
                         <code>Cmd+1</code>.
+                    </p>
+                    <h3>
+                        <span>Review Mode</span>
+                    </h3>
+                    <p>
+                        Review mode lets you mark up a chapter without changing
+                        its text. Typing, pasting, and formatting are turned off,
+                        but you can still add comments, suggestions, and
+                        highlights. Select some text and a small menu appears
+                        above it with the highlight colors, <b>Comment</b>, and
+                        <b>Suggest</b>. Entering Review mode opens the
+                        <a href="#review-tool">Review</a> tool, where you write
+                        each comment or suggestion. Accepting or rejecting
+                        suggestions changes the text, so it happens in editing
+                        mode.
+                    </p>
+                    <p>
+                        Review mode works on manuscript chapters and is part of
+                        the Pro plan. Comments, suggestions, highlights, and the
+                        Review tool are available to everyone in editing mode.
+                    </p>
+                    <p>
+                        Switch to review mode with
+                        <code>Shift+Cmd+R</code>.
                     </p>
                     <h3>
                         <span>Reading Mode</span>
@@ -376,12 +432,70 @@ scripts: [/static/js/docs-navigation.js]
                         compatibility.
                     </p>
                     <hr />
+                    <h2 id="review">Review</h2>
+                    <p>
+                        Longhand lets you review a manuscript the way an editor
+                        marks up a printed page. Add review items from the <code>Review</code> menu,
+                        the context menu, or the floating menu in
+                        <a href="#editor-modes">Review mode</a>. Comments and
+                        suggestions belong to manuscript chapters; notes support
+                        highlights only.
+                    </p>
+                    <h3>Comments</h3>
+                    <p>
+                        Select some text and choose
+                        <code>Review &gt; Comments &gt; Add Comment</code>. The
+                        comment opens in the Review tool so you can type it. In
+                        the editor, commented text is marked and the comment
+                        itself stays out of the way. A comment covers text within
+                        one paragraph, and comments can't overlap.
+                    </p>
+                    <h3>Suggestions</h3>
+                    <p>
+                        A suggestion proposes a change to the text. Select the
+                        text you want to replace and choose
+                        <code>Review &gt; Suggestions &gt; Add Suggestion</code>,
+                        then type the replacement in the Review tool. Leave the
+                        replacement empty to suggest deleting the text, or add a
+                        suggestion with nothing selected to suggest an insertion.
+                        Like comments, a suggestion stays within one paragraph,
+                        and suggestions can't overlap.
+                    </p>
+                    <p>
+                        Accept a suggestion to apply it, or reject it to keep the
+                        original text. <code>Accept All Suggestions</code> and
+                        <code>Reject All Suggestions</code> resolve every
+                        suggestion in the chapter at once.
+                    </p>
+                    <h3>Highlights</h3>
+                    <p>
+                        Highlights work as described in
+                        <a href="#markdown">Colored highlights</a>. The
+                        <code>Review &gt; Highlights</code> menu applies each
+                        color and removes one highlight or all of them.
+                    </p>
+                    <h3>How review items are saved</h3>
+                    <p>
+                        Review items are stored as plain text in the chapter's
+                        Markdown file, next to the text they refer to:
+                    </p>
+                    <pre>(:comment "Can we show this instead?": She was afraid.:)
+(:suggestion "terrified": afraid:)</pre>
+                    <p>
+                        Because they live in the file, comments and suggestions
+                        travel with the chapter when you copy, back up, or sync
+                        your project.
+                    </p>
+                    <hr />
                     <h2 id="tools">Tools</h2>
                     <p>
                         The tool panel on the right side of the screen hosts
-                        auxiliary tools that assist your writing. Click a tool
-                        icon to activate it; click it again to hide the panel.
-                        Tools are available in editing mode and reading mode.
+                        auxiliary tools that assist your writing. Its header shows
+                        the current tool; click it to open the tool list, type to
+                        filter, and choose a tool. You can also pick any tool from
+                        the <code>Tools</code> menu. Tools that don't work in the
+                        current mode are dimmed with the reason. Grammar Checker
+                        and Version History are available in editing mode only.
                     </p>
                     <h3>Minimap</h3>
                     <p>
@@ -412,14 +526,46 @@ scripts: [/static/js/docs-navigation.js]
                     </p>
                     <h3>Search</h3>
                     <p>
-                        Search across your entire project. In <b>editing
+                        Search across your entire project
+                        (<code>Shift+Cmd+F</code>). In <b>editing
                         mode</b>, search finds matches across all manuscript
                         files and notes, showing each result with surrounding
                         context. Click a result to open that file and jump to
                         the match. In <b>reading mode</b>, search finds
                         matches within the assembled manuscript. Use the scope
                         filters to narrow results to manuscript only or notes
-                        only.
+                        only. Search looks at the text a reader sees, so it skips
+                        comment text and suggested replacements.
+                    </p>
+                    <h3 id="review-tool">Review</h3>
+                    <p>
+                        The Review tool lists the chapter's comments,
+                        suggestions, and highlights in the order they appear.
+                        Click an item to jump to it. Write and edit comments and
+                        suggested replacements directly in their cards. In
+                        editing mode, suggestion cards have <b>Accept</b> and
+                        <b>Reject</b> buttons, highlight cards let you change the
+                        color, and every card can be removed. The
+                        Review tool is available for chapters in editing and
+                        review mode.
+                    </p>
+                    <h3 id="notes-reference">Notes Reference</h3>
+                    <p>
+                        Notes Reference keeps your research beside the
+                        manuscript. Pinned notes appear as cards you can read
+                        while you write; expand or collapse each card, and drag
+                        its bottom edge to resize it (double-click the edge to fit
+                        the content). Search your notes by title, tag, or text,
+                        and pin or unpin from the results. The open button on a
+                        card opens the note in the editor. Pins are saved with
+                        the project.
+                    </p>
+                    <p>
+                        For more room, turn on the reference layout with the
+                        widen button in the tool, or <code>Option+Cmd+R</code>
+                        (<code>View &gt; Reference Layout</code>). It hides the
+                        navigator and widens the reference pane. Drag the divider
+                        between the editor and the pane to resize it.
                     </p>
                     <h3>Grammar Checker</h3>
                     <p>
@@ -432,9 +578,11 @@ scripts: [/static/js/docs-navigation.js]
                     </p>
                     <h3>Export</h3>
                     <p>
-                        Export your documents to PDF or Word (DOCX). Select
-                        your format from the dropdown and click Export to save
-                        the file. In <b>editing mode</b>, the current file is
+                        Export your documents to PDF, Word (DOCX), Markdown, or
+                        HTML. Select your format from the dropdown and click
+                        Export to save the file. The file is named after the
+                        chapter, or after the project when you export the whole
+                        manuscript. In <b>editing mode</b>, the current file is
                         exported. In <b>reading mode</b>, the entire assembled
                         manuscript is exported as a single document. Line
                         separators (<code>---</code> and <code>***</code>)
